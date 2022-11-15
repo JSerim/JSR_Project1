@@ -1,0 +1,148 @@
+
+[설계 Note]
+
+** 디렉토리 및 파일 구성 **
+
+    > web_poject
+        - index.html : p1. 메인페이지 @
+        > css
+        > js
+            - join.js : p2. 회원가입 유효성검사 페이지
+        > images
+        > members : 회원가입, 수정, 탈퇴
+            - join.html/php : p3. 회원가입
+            - insert.php : p4. 회원가입 처리
+            - welcome.php : p5. 회원가입 완료
+        > login : 로그인, 로그아웃
+        > inc : 공통 파일
+            - dbcon.php : p6. DB연결 객체
+
+
+(회원가입)
+
+** 사용자 데이터 입력 항목 **
+
+    ( 항목 | 요소 | type | value | name | id | class | 제약)
+    --------------------------------------------------------------------------------------------------
+    회원구분 : 개인 | input | radio | i | user_type | ut_i | user_type | -
+    회원구분 : 사업자 | input | radio | b | user_type | ut_b | user_type | -
+    회원구분 : 외국인 | input | radio | f | user_type | ut_f | user_type | -
+
+    이름 | input | text | - | u_name | u_name | u_name | 필수입력
+    아이디 | input | text | - | u_id | u_id | u_id | 필수입력, 4~12글자
+    아이디 중복 확인 | button | button | - | id_check | id_check | id_check | -
+    비밀번호 | input | password | - | pwd | pwd | pwd | 필수입력, 4~12글자
+    비밀번호 확인 | input | password | - | repwd | repwd | repwd | 비밀번호와 일치
+
+    우편번호 | input | text | - | ps_code | ps_code | ps_code | 5글자 숫자
+    주소 검색 | button | button | - | pc_search | pc_search | pc_search | -
+    기본주소 | input | text | - | addr_b | addr_b | addr_b | -
+    상세주소 | input | text | - | addr_d | addr_d | addr_d | -
+
+    휴대전화 | input | text | - | mobile | mobile | mobile | 필수입력
+    인증번호 | input | text | - | certify_nb | certify_nb | certify_nb | 필수입력
+    인증번호 받기 | button | button | - | certify_bt | certify_bt | certify_bt | -
+
+    이메일 아이디 | input | text | - | email_id | email_id | email_id | 필수입력, 영어&숫자
+    도메인 주소 | input | text | - | email_dns | email_dns | email_dns | 필수입력
+    도메인 선택 | select | - | - | email_sel | email_sel | email_sel | 이메일 주소란과 연결
+    도메인 항목 : 직접입력 | option | - | - | - | - | - | -
+    도메인 항목 : 네이버 | option | - | naver.com | - | - | - | -
+    도메인 항목 : 다음 | option | - | hanmail.net | - | - | - | -
+    도메인 항목 : 구글 | option | - | gmail.com | - | - | - | -
+
+    성별 : 남 | input | radio | m | gender | mail | gender | -
+    성별 : 여 | input | radio | f | gender | femail | gender | -
+
+    생년월일 | input | text | - | birth | birth | birth | 8자리 숫자
+    생년월일 : 양력 | input | radio | s | calender | solar | calender | -
+    생년월일 : 음력 | input | radio | l | calender | lunar | calender | -
+
+    예금주 | input | text | - | account_nm | account_nm | account_nm | -
+    은행명 선택 | select | - | - | bank_sel | bank_sel | bank_sel | -
+    은행명 항목 : 신한은행 | option | - | SH | - | - | - | -
+    은행명 항목 : 농협은행 | option | - | NH | - | - | - | -
+    은행명 항목 : 국민은행 | option | - | KB | - | - | - | -
+    계좌번호 | input | text | - | account_nb | account_nb | account_nb | 숫자만 입력
+
+    이용 약관 동의 | input | checkbox | y | apply_1 | apply_1 | apply_1 | 필수입력
+    개인정보 수집 및 이용 동의 | input | checkbox | y | apply_2 | apply_2 | apply_2 | 필수입력
+    SMS 수신 동의 | input | checkbox | y | sms_apply | sms_apply | sms_apply | -
+    이메일 수신 동의 | input | checkbox | y | email_apply | email_apply | email_apply | -
+
+    돌아가기 | button | button | - | back | back | back | -
+    회원가입 | button | submit | - | join_c | join_c | join_c | -
+    --------------------------------------------------------------------------------------------------
+
+** 테이블 설계 ** 
+
+    Table 명 : members
+    ( 항목 | 필드명 | 데이터타입(길이) | 제약 )
+    --------------------------------------------------------------------------------------------------
+    인덱스 | idx | int | auto_increment, primary key
+    회원구분 | user_type | char(1) | not null
+    이름 | u_name | varchar(30) | not null
+    아이디 | u_id | varchar(20) | not null
+    비밀번호 | pwd | varchar(20) | not null
+    우편번호 | ps_code | char(5) | -
+    기본주소 | addr_b | varchar(100) | -
+    상세주소 | addr_d | varchar(100) | -
+    휴대전화 | mobile | varchar(15) | not null
+    이메일 | email | varchar(50) | not null
+    성별 | gender | char(1) | -
+    생년월일 | birth | date | -
+    양력/음력 | calender | char(1) | -
+    예금주 | account_nm | varchar(30) | -
+    은행명 | back | char(2) | -
+    계좌번호 | account_nb | varchar(30) | -
+    이용약관 동의 | apply_1 | char(1) | not null
+    개인정보 수집 및 이용 동의 | apply_2 | char(1) | not null
+    SMS 수신 동의 | sms_apply | char(1) | -
+    이메일 수신 동의 | email_apply | char(1) | -
+    가입일 | reg_date | datetime | - 
+    --------------------------------------------------------------------------------------------------
+
+** DB 생성 **
+    create database practice
+    default character set utf8
+    default collate utf8_general_ci;
+    (문자셋 완료)
+
+
+** 테이블 생성 **
+
+    Table 명 : members (DB : practice)
+    create table members(
+        idx int auto_increment primary key,
+        user_type varchar(3) not null,
+        u_name varchar(30) not null,
+        u_id varchar(20) not null,
+        pwd varchar(20) not null,
+        ps_code char(5),
+        addr_b varchar(100),
+        addr_d varchar(100),
+        mobile varchar(15) not null,
+        email varchar(50) not null,
+        gender char(1),
+        birth date,
+        calender char(2),
+        account_nm varchar(30),
+        bank varchar(10),
+        account_nb varchar(30),
+        sms_apply char(1),
+        email_apply char(1),
+        reg_date datetime 
+    );
+
+** 관리자 입력 **
+    insert into members value(1, '-', '관리자', 'admin', '1234', '', '', '',
+    '01011112222', 'admin@naver.com', '', '', '', '', '', '', '', '', '2022-11-01');
+
+==================================================
+** PHP **
+1. 객체 생성
+2. DB 연결
+3. 쿼리 작성
+4. DB, 쿼리 연동
+5. DB 접속 종료
+6. 리디렉션

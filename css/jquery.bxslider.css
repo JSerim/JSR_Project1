@@ -1,0 +1,286 @@
+/** VARIABLES
+===================================*/
+/** RESET AND LAYOUT
+===================================*/
+.bx-wrapper {
+  position: relative;
+  padding: 0;
+  *zoom: 1;
+  -ms-touch-action: pan-y;
+  touch-action: pan-y;
+}
+.bx-wrapper img {
+  max-width: 100%;
+  display: block;
+}
+.bxslider {
+  margin: 0;
+  padding: 0;
+}
+ul.bxslider {
+  list-style: none;
+}
+.bx-viewport {
+  /*fix other elements on the page moving (on Chrome)*/
+  -webkit-transform: translatez(0);
+}
+/** THEME
+===================================*/
+.bx-wrapper .bx-pager{
+  position: absolute;
+  top:350px;
+  width:130px;
+}
+.bx-wrapper .bx-controls-auto {
+  position: absolute;
+  top:455px;
+  left:850px;
+}
+/* LOADER */
+.bx-wrapper .bx-loading {
+  min-height: 50px;
+  background: url('../images/bx_loader.gif') center center no-repeat #ffffff;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2000;
+}
+/* PAGER */
+.bx-wrapper .bx-pager {
+  text-align: center;
+  font-size: .85em;
+  font-family: Arial;
+  font-weight: bold;
+  color: #666;
+  position:absolute;
+  top:460px;
+  left:665px;
+}
+.bx-wrapper .bx-pager.bx-default-pager a {
+  background: #666;
+  text-indent: -9999px;
+  display: block;
+  width: 10px;
+  height: 10px;
+  margin: 0 5px;
+  padding:1.5px;
+  outline: 0;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 10px; 
+}
+.bx-wrapper .bx-pager.bx-default-pager a:hover,
+.bx-wrapper .bx-pager.bx-default-pager a.active,
+.bx-wrapper .bx-pager.bx-default-pager a:focus{
+  background: #000;
+}
+.bx-wrapper .bx-pager-item,
+.bx-wrapper .bx-controls-auto .bx-controls-auto-item {
+  display: inline-block;
+  vertical-align: bottom;
+  *zoom: 1;
+  *display: inline;
+}
+.bx-wrapper .bx-pager-item {
+  font-size: 0;
+  line-height: 0;
+}
+/* DIRECTION CONTROLS (NEXT / PREV) */
+.bx-wrapper .bx-prev {
+  background: url('../images/main_before.png') no-repeat;
+}
+.bx-wrapper .bx-next {
+  background: url('../images/main_next.png') no-repeat;
+}
+.bx-controls-direction{
+  width:135px;
+  position:relative;
+  left:800px;
+  top:-32px;
+  height:26px;
+}
+.bx-wrapper .bx-controls-direction .bx-prev {
+  position: absolute;
+  width: 49px;
+  height: 26px;
+  text-indent: -9999px;
+  z-index: 9999;
+}
+.bx-wrapper .bx-controls-direction .bx-next {
+  position: absolute;
+  left:85px;
+  width: 49px;
+  height: 26px;
+  text-indent: -9999px;
+  z-index: 9999;
+}
+.bx-wrapper .bx-controls-direction a.disabled {
+  display: none;
+}
+/* 신상품 슬라이드 컨트롤 */
+.cont1_product .bx-wrapper .bx-prev {
+  background: url('../images/cont_control_before.png') no-repeat;
+}
+.cont1_product .bx-wrapper .bx-next {
+  background: url('../images/cont_control_next.png') no-repeat;
+}
+.cont1_product .bx-controls-direction{
+  width:135px;
+  position:relative;
+  left:1040px;
+  top:-363px;
+  height:26px;
+}
+.cont1_product .bx-wrapper .bx-controls-direction .bx-prev {
+  position: absolute;
+  width: 49px;
+  height: 26px;
+  text-indent: -9999px;
+  z-index: 9999;
+}
+.cont1_product .bx-wrapper .bx-controls-direction .bx-next {
+  position: absolute;
+  left:85px;
+  width: 49px;
+  height: 26px;
+  text-indent: -9999px;
+  z-index: 9999;
+}
+.cont1_product .bx-wrapper .bx-controls-auto {
+  text-align: center;
+  position:absolute;
+  top:-70px;
+  left:1087px;
+}
+.cont1_product .bx-wrapper .bx-controls-auto .bx-start {
+  background: url('../images/cont_control_play.png') no-repeat;
+  display: block;
+  text-indent: -9999px;
+  width: 37px;
+  height: 26px;
+  outline: 0;
+  position:relative;
+  top:-2px;
+  left:2px;
+  display:none;
+}
+.cont1_product .bx-wrapper .bx-controls-auto .bx-stop {
+  background: url('../images/cont_control_stop.png') no-repeat;
+  display: block;
+  text-indent: -9999px;
+  width: 37px;
+  height: 26px;
+  outline: 0;
+  position:relative;
+  top:-3px;
+}
+/* 베스트 슬라이드 컨트롤 */
+.cont2_product .bx-wrapper .bx-prev {
+  background: url('../images/cont_control_before.png') no-repeat;
+}
+.cont2_product .bx-wrapper .bx-next {
+  background: url('../images/cont_control_next.png') no-repeat;
+}
+.cont2_product .bx-controls-direction{
+  width:135px;
+  position:relative;
+  left:1040px;
+  top:-363px;
+  height:26px;
+}
+.cont2_product .bx-wrapper .bx-controls-direction .bx-prev {
+  position: absolute;
+  width: 49px;
+  height: 26px;
+  text-indent: -9999px;
+  z-index: 9999;
+}
+.cont2_product .bx-wrapper .bx-controls-direction .bx-next {
+  position: absolute;
+  left:85px;
+  width: 49px;
+  height: 26px;
+  text-indent: -9999px;
+  z-index: 9999;
+}
+.cont2_product .bx-wrapper .bx-controls-auto {
+  text-align: center;
+  position:absolute;
+  top:-70px;
+  left:1087px;
+}
+.cont2_product .bx-wrapper .bx-controls-auto .bx-start {
+  background: url('../images/cont_control_play.png') no-repeat;
+  display: block;
+  text-indent: -9999px;
+  width: 37px;
+  height: 26px;
+  outline: 0;
+  position:relative;
+  top:-2px;
+  left:2px;
+  display:none;
+}
+.cont2_product .bx-wrapper .bx-controls-auto .bx-stop {
+  background: url('../images/cont_control_stop.png') no-repeat;
+  display: block;
+  text-indent: -9999px;
+  width: 37px;
+  height: 26px;
+  outline: 0;
+  position:relative;
+  top:-3px;
+}
+/* AUTO CONTROLS (START / STOP) */
+/* 메인이미지 */
+.main_image .bx-wrapper .bx-controls-auto {
+  text-align: center;
+}
+.main_image .bx-wrapper .bx-controls-auto .bx-start {
+  background: url('../images/main_play.png') no-repeat;
+  display: block;
+  text-indent: -9999px;
+  width: 37px;
+  height: 26px;
+  outline: 0;
+  position:relative;
+  display:none;
+  top:-2px;
+}
+.main_image .bx-wrapper .bx-controls-auto .bx-stop {
+  background: url('../images/main_stop.png') no-repeat;
+  display: block;
+  text-indent: -9999px;
+  width: 37px;
+  height: 26px;
+  outline: 0;
+  position:relative;
+  top:-20px;
+  left:-2px;
+}
+/* PAGER WITH AUTO-CONTROLS HYBRID LAYOUT */
+.bx-wrapper .bx-controls.bx-has-controls-auto.bx-has-pager .bx-pager {
+  text-align: left;
+}
+.bx-wrapper .bx-controls.bx-has-controls-auto.bx-has-pager .bx-controls-auto {
+  right: 0;
+  width: 35px;
+}
+/* IMAGE CAPTIONS */
+.bx-wrapper .bx-caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background: #666;
+  background: rgba(80, 80, 80, 0.75);
+  width: 100%;
+}
+.bx-wrapper .bx-caption span {
+  color: #fff;
+  font-family: Arial;
+  display: block;
+  font-size: .85em;
+  padding: 10px;
+}

@@ -1,0 +1,169 @@
+/* Footer IR */
+.footer_top{
+    background:url(../images/company_info.png) no-repeat;
+    display:block;
+    width:151px;
+    height:15px;
+    text-indent:-9999px;
+}
+.company_info a{
+    background:url(../images/footer_bt_left.gif) no-repeat;
+    display:block;
+    width:107px;
+    height:23px;
+    text-indent:-9999px;
+}
+.fmr_cont1_a a{
+    background:url(../images/footer_bt_right_top.gif) no-repeat;
+    display:block;
+    width:104px;
+    height:21px;
+    text-indent:-9999px;
+}
+.fmr_cont2>a{
+    background:url(../images/footer_bt_right_bottom.gif) no-repeat;
+    display:block;
+    width:118px;
+    height:22px;
+    text-indent:-9999px;
+}
+.fmr_cont2_a{
+    background:url(../images/fmr_cont2_a.png) no-repeat;
+    display:block;
+    width:59px;
+    height:59px;
+    text-indent:-9999px;
+}
+.fmr_cont2_b{
+    background:url(../images/fmr_cont2_b.png) no-repeat;
+    display:block;
+    width:59px;
+    height:59px;
+    text-indent:-9999px;
+}
+.fmr_cont2_c{
+    background:url(../images/fmr_cont2_c.png) no-repeat;
+    display:block;
+    width:59px;
+    height:59px;
+    text-indent:-9999px;
+}
+.footer_bottom{
+    background:url(../images/footer_bottom_bar.gif) no-repeat;
+    display:block;
+    width:1px;
+    height:50px;
+}
+
+
+/* --------------------------- Footer 디자인 ------------------------------ */
+.footer{
+    width:100%; 
+    height:380px;
+    background:#FCF9ED;
+    border:1px solid #FCF9ED;
+    box-sizing:border-box;
+    font-size:14px;
+} 
+.footer_content_area{
+    width:1200px;
+    height:380px;
+    margin:auto;
+    border:1px solid #0000;
+    box-sizing:border-box;
+}
+.footer_top{
+    margin-top:17px;
+    margin-bottom:16px;
+    margin-left:20px;
+}
+.footer_middle{
+    width:1200px;
+    height:280px;
+    border-top:1px solid #adacac;
+    padding:15px 15px;
+    box-sizing:border-box;
+}
+.footer_middle_left{
+    width:438px;
+    height:246px;
+    float:left;
+}
+.company_info{
+    line-height:1.8em;
+    margin-right:15pxpx;
+}
+.company_info a{
+    float:right;
+    margin-right:115px;
+    margin-top:-25px;
+}
+.footer_middle_center{
+    float:left;
+    width:270px;
+    height:250px;
+    border-right:1px solid #adacac;
+    border-left:1px solid #adacac;
+    padding-right:15px;
+    padding-left:15px;
+    margin-left:5px;
+    box-sizing:border-box;
+}
+.user_info{
+    line-height:1.8em;
+}
+.time_info{
+    margin-left:15px;
+}
+.footer_middle_right{
+    float:right;
+    width:443px;
+    height:256px;
+    line-height:1.5em;
+    margin-left:14px;
+}
+.fmr_cont1_wrap dt{
+    font-weight:bold;
+}
+.fmr_cont1_wrap dl{
+    margin-bottom:15px;
+}
+.fmr_cont1_wrap dl dd:nth-of-type(2){
+    color: #949494;
+}
+.fmr_cont1_a a{
+    float:right;
+    margin-top:-45px;
+    margin-right:100px;
+}
+.fmr_cont2>a{
+    margin-top:8px;
+}
+.fmr_cont2_wrap{
+    width:191px;
+    height:59px;
+    float:right;
+    margin-right:15px;
+    margin-top:-26px;
+}
+.fmr_cont2_a{
+    float:left;
+    margin-right:7px;
+}
+.fmr_cont2_b{
+    float:left;
+    margin-right:7px;
+}
+.fmr_cont2_c{
+    float:left;
+}
+.footer_bottom{
+    background:#002a03;
+    width:100%; 
+    height:40px;
+    margin-top:20px;
+}
+.footer_bottom p{
+    color:#fff;
+    padding:11px;
+}

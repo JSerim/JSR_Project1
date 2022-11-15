@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+	<title>Parallax Scrolling Effects & Scroll Animations Examples</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+	<link href="jquery.parallax.css" rel="stylesheet">
+	
+	<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+	<script type="text/javascript" src="jquery.parallax.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			$('.w_main').parallax({mode:1});
+			function custom_show(obj, mode) {
+				obj.find(".bw").addClass('animation animation_'+mode);
+			}
+		})
+	</script>
+</head>
+<body class="p-0">
+
+<div class="w_main container-fluid" data-rate="0.5" data-effect="slide-up">
+	<div class="bw row p-5" >
+		<h1 class="col-12 text-center mb-5">Page Section</h1>
+		<div class="col-12 col-md p-2 bg-light" style="height:300px;">1</div>
+		<div class="col-12 col-md p-2 bg-light mx-0 mx-md-5 my-5 my-md-0" style="height:300px;">2</div>
+		<div class="col-12 col-md p-2 bg-light" style="height:300px;">3</div>
+	</div>
+</div>
+
+<div class="w_main container-fluid" style="border:1px solid red">
+	<div class="bw row p-5" data-rate="0.5" data-effect="slide-up" style="border:1px solid blue">
+		<h1 class="col-12 text-center mb-5" style="border:1px solid green">Page Section</h1>
+		<div class="col-12 col-md p-2 bg-light" style="height:300px;"></div>
+		<div class="col-12 col-md p-2 bg-light mx-0 mx-md-5 my-5 my-md-0" style="height:300px;"></div>
+		<div class="col-12 col-md p-2 bg-light" style="height:300px;"></div>
+	</div>
+</div>
+<div class="w_main container-fluid">
+	<div class="bw row p-5" data-rate="0.5" data-effect="slide-up">
+		<h1 class="col-12 text-center mb-5">Page Section</h1>
+		<div class="col-12 col-md p-2 bg-light" style="height:300px;"></div>
+		<div class="col-12 col-md p-2 bg-light mx-0 mx-md-5 my-5 my-md-0" style="height:300px;"></div>
+		<div class="col-12 col-md p-2 bg-light" style="height:300px;"></div>
+	</div>
+</div>
+<div class="w_main container-fluid">
+	<div class="bw row p-5" data-rate="0.5" data-effect="slide-up">
+		<h1 class="col-12 text-center mb-5">Page Section</h1>
+		<div class="col-12 col-md p-2 bg-light" style="height:300px;"></div>
+		<div class="col-12 col-md p-2 bg-light mx-0 mx-md-5 my-5 my-md-0" style="height:300px;"></div>
+		<div class="col-12 col-md p-2 bg-light" style="height:300px;"></div>
+	</div>
+</div>
+<div class="w_main container-fluid">
+	<div class="bw row p-5" data-rate="0.5" data-effect="slide-up">
+		<h1 class="col-12 text-center mb-5">Page Section</h1>
+		<div class="col-12 col-md p-2 bg-light" style="height:300px;"></div>
+		<div class="col-12 col-md p-2 bg-light mx-0 mx-md-5 my-5 my-md-0" style="height:300px;"></div>
+		<div class="col-12 col-md p-2 bg-light" style="height:300px;"></div>
+	</div>
+</div>
+</body>
+
+
+</html>

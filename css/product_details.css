@@ -1,0 +1,816 @@
+/* --------------------------- Main IR --------------------------- */
+.lock_img{
+    background:url(../images/qa_lock.gif) no-repeat;
+    display:block;
+    width:15px;
+    height:19px;
+    text-indent:-9999px;
+}
+.reply_img{
+    background:url(../images/qa_asw.gif) no-repeat;
+    display:block;
+    width:30px;
+    height:18px;
+    text-indent:-9999px;
+}
+.delivery_charge_box_close_bt{
+    background:url(../images/pddt_delivery_discnt_close_bt.gif) no-repeat;
+    display:block;
+    width:15px;
+    height:15px;
+    text-indent:-9999px;
+}
+.stars_img{
+    background:url(../images/pddt_review_star.gif) repeat-x;
+    display:block;
+    width:85px;
+    height:16px;
+    text-indent:-9999px;
+}
+.kko_plus_fd{
+    background:url(../images/kakao_plus.gif) repeat-x;
+    display:block;
+    width:229px;
+    height:64px;
+    text-indent:-9999px;
+}
+.buy_naverpay_cls{
+    background:url(../images/npay.gif) repeat-x;
+    display:block;
+    width:229px;
+    height:64px;
+    text-indent:-9999px;
+}
+.before{
+    background:url(../images/movelist_before.gif) no-repeat;
+    display:block;
+    width:20px;
+    height:20px;
+    text-indent:-9999px;
+}
+.next{
+    background:url(../images/movelist_next.gif) no-repeat;
+    display:block;
+    width:20px;
+    height:20px;
+    text-indent:-9999px;
+}
+
+/* --------------------------- Main 디자인 --------------------------- */
+button:hover{
+    font-weight:bold;
+}
+input, button{
+    font-size:16px;
+}
+
+
+/* ---------------------------Main------------------------------- */
+.content{
+    width:1200px;
+    height:13300px;
+    margin:auto;
+    position:relative;
+    z-index:1;
+}
+/* 컨텐츠 */
+.product_details_section{
+    width:1200px;
+    height:100%;
+    margin:auto;
+    margin-top:60px;
+    position:relative;
+    z-index:2;
+}
+/* 좌측 제품 이미지 */
+.product_img{
+    width:450px;
+    position:relative;
+    left:190px; 
+    float:left;
+}
+.big_img{
+    margin-bottom:10px;
+}
+.big_img img{
+    width:400px;
+    height:400px;
+}
+.thumb_img img{
+    width:90px;
+    height:90px;
+}
+.thumb_img img{
+    margin-right:10px;
+}
+/* 우측 옵션 선택 */
+.option_wrap{
+    float:right;
+    width:600px;
+    height:800px;
+    padding-left:30px;
+    box-sizing:border-box;
+}
+.option_1{
+    width:529px;
+    height:118px;
+    border-top:1px solid #000;
+    box-sizing:border-box;
+    padding-top:9px;
+    padding-left:29px;
+}
+.free_delivery_txtbox{
+    display:inline-block;
+    width:75px;
+    height:28px;
+    border:1px solid #999;
+    padding-top:1.5px;
+    text-align:center;
+    box-sizing:border-box;
+    margin-right:8px;
+    margin-bottom:10px;
+}
+.new_pd_txtbox{
+    display:inline-block;
+    width:50px;
+    height:28px;
+    border:1px solid #999;
+    padding-top:1px;
+    text-align:center;
+    box-sizing:border-box;
+}
+.product_name{
+    font-size:22px;
+    margin-bottom:15px;
+}
+
+.option_2{
+    width:529px;
+    height:106px;
+    border-top:1px solid #999;
+    box-sizing:border-box;
+    padding-top:15px;
+    padding-left:29px;
+    padding-bottom:15px;
+    margin-bottom:25px;
+}
+.price{
+    font-size:20px;
+    margin-bottom:13px;
+}
+.discnt_price{
+    font-size:18px;
+    margin-bottom:13px;
+    color:red;
+}
+.delivery_charge{
+    font-size:18px;
+}
+.price span{
+    margin-left:135px;
+}
+.discnt_price span{
+    margin-left:140px;
+}
+.delivery_charge span{
+    margin-left:140px;
+}
+.delivery_charge_bt{
+    display:inline-block;
+    width:80px;
+    height:20px;
+    border:1px solid rgb(25, 125, 255);
+    border-radius:5px;
+    color:rgb(25, 125, 255);
+    font-size:15px;
+    text-align:center;
+    position:relative;
+    top:-1.5px;
+    left:5px;
+}
+/* 배송비 할인 클릭하면 나오는 창 ------- S */
+.delivery_charge_box_wrap{
+    width:330px;
+    height:260px;
+    background:#fff;
+    border:1px solid #464646;
+    box-sizing:border-box;
+    padding-left:19px;
+    position:absolute;
+    top:233px;
+    left:620px;
+    z-index:5;
+    display:none;
+}
+.delivery_charge_box_title{
+    font-weight:bold;
+    margin-top:12px;
+    margin-bottom:14px;
+}
+.free_delivery_title{
+    font-size:15px;
+    margin-bottom:8px;
+}
+.free_delivery_txt_wrap{
+    width:289px;
+    height:56px;
+    border:1px solid #999;
+    box-sizing:border-box;
+    margin-bottom:14px;
+}
+.free_delivery_txt1{
+    display:block;
+    font-size:14px;
+    width:55px;
+    height:56px;
+    padding-left:13px;
+    padding-top:18px;
+    border-right:1px solid #999;
+    box-sizing:border-box;
+    float:left;
+    position:relative;
+    top:-1px;
+}
+.free_delivery_txt2{
+    display:inline-block;
+    color:rgb(20, 129, 255);
+    font-size:14px;
+    margin-top:7px;
+}
+.free_delivery_txt3{
+    font-size:14px;
+}
+
+.before_discnt_title{
+    font-size:15px;
+    margin-bottom:8px;
+}
+.before_discnt_title_txt_wrap{
+    width:289px;
+    height:70px;
+    border:1px solid #999;
+    box-sizing:border-box;
+    margin-bottom:16px;
+}
+.before_discnt_txt1{
+    display:block;
+    font-size:14px;
+    width:55px;
+    height:69px;
+    padding-left:7px;
+    padding-top:23px;
+    border-right:1px solid #999;
+    box-sizing:border-box;
+    float:left;
+}
+.before_discnt_txt2{
+    display:inline-block;
+    color:rgb(20, 129, 255);
+    font-size:14px;
+    margin-top:3px;
+}
+.before_discnt_txt3{
+    font-size:14px;
+}
+.delivery_charge_box_close_bt{
+    position:relative;
+    top:-245px;
+    left:281px;
+}
+/* 배송비 할인 클릭하면 나오는 창 ------------- E */
+.notice{
+    width:529px;
+    height:50px;
+    border-top:1px solid #999;
+    box-sizing:border-box;
+    padding-top:6px;
+    padding-left:29px;
+    font-size:18px;
+}
+.star_txt{
+    margin-left:135px;
+    margin-right:5px;
+    position:relative;
+    top:5px;
+    font-size:25px;
+}
+
+.option_3{
+    width:529px;
+    height:435px;
+}
+.slt_pd{
+    width:529px;
+    height:54px;
+    border-top:1px solid #999;
+    background:#ececec;
+    box-sizing:border-box;
+    padding-top:8px;
+    padding-left:29px;
+}
+.option_txt{
+    font-size:18px;
+    display:inline-block;
+}
+.option_slt{
+    width:252px;
+    height:34px;
+    margin-left:145px;
+    font-size:15px;
+    padding-left:5px;
+    box-sizing:border-box;
+    border:1px solid #464646;
+}
+.minimum_order_txt{
+    width:529px;
+    height:45px;
+    border-top:1px solid #999;
+    box-sizing:border-box;
+    font-size:16px;
+    padding-top:12px;
+    padding-left:26px;
+    color:#464646;
+}
+.option_3_table{
+    width:529px;
+    height:135px;
+    border-bottom:1px solid #999;
+}
+.option_3_th th{
+    border-top:1px solid #999;
+    border-bottom:1px solid #999;
+    height:40px;
+    background:#ececec;
+    font-size:18px;
+}
+.u_pd_quantity{
+    width:53px;
+    height:23px;
+    float:left;
+    margin-right:10px;
+}
+.delete{
+    position:relative;
+    top:3px;
+}
+.option_3_td1{
+    width:337px;
+    font-size:17px;
+    line-height:1.8;
+    position:relative;
+}
+.u_choice{
+    display:inline-block;
+    width:140px;
+    height:27px;
+    background:#464646;
+    border-radius:5px;
+    color:white;
+    position:absolute;
+    top:46px;
+    left:85px;
+    font-size:15px;
+    text-align:center;
+}
+.option_3_td2{
+    width:99px;
+}
+.option_3_td3{
+    width:93px;
+    padding-left:20px;
+}
+
+.amount{
+    width:529px;
+    height:50px;
+    box-sizing:border-box;
+    padding-top:10px;
+    font-size:18px;
+    text-align:right;
+    margin-bottom:10px;
+}
+.u_amount_txt{
+    display:inline-block;
+    font-size:23px;
+    font-weight:bold;
+}
+
+.buynow_cls{
+    width:150px;
+    height:50px;
+    margin-right:15px;
+    margin-left:20px;
+    border:1px solid #000;
+    box-sizing:border-box;
+    background:#2c2c2c;
+    color:white;
+    margin-bottom:22px;
+    box-shadow:2px 2px 6px -1px #000;
+    font-size:18px;
+}
+.save_shopbk_cls{
+    width:150px;
+    height:50px;
+    margin-right:15px;
+    background:#ececec;
+    box-sizing:border-box;
+    border:1px solid #949494;
+    box-shadow:2px 2px 6px -1px;
+    font-size:18px;
+}
+.save_interest_cls{
+    width:150px;
+    height:50px;
+    border:1px solid #949494;
+    background:#ececec;
+    box-sizing:border-box;
+    box-shadow:2px 2px 6px -1px;
+    font-size:18px;
+}
+.kko_plus_fd{
+    float:left;
+    margin-right:25px;
+    margin-left:23px;
+    box-shadow:2px 2px 6px -1px;
+}
+.buy_naverpay_cls{
+    float:left;
+    box-shadow:2px 2px 6px -1px;
+}
+/* 페이지 메뉴 버튼 라인 ---------- SSSSSS */
+.pagemenu_line{
+    display:block;
+    width:100%;
+    height:2px;
+    background:#999;
+    position:relative;
+    top:60px;
+    clear:both;
+}
+.product_details_title_bt{
+    width:160px;
+    height:43px;
+    border:2px solid #949494;
+    background:#ececec;
+    font-size:18px;
+    text-align:center;
+    padding-top:7px;
+    box-sizing:border-box;
+    position:absolute;
+    top:819px;
+    left:220px;
+}
+/* 클릭효과 Test */
+/* .product_details_title_bt{
+    width:160px;
+    height:43px;
+    border:2px solid #949494;
+    font-size:18px;
+    text-align:center;
+    padding-top:7px;
+    box-sizing:border-box;
+    position:absolute;
+    top:819px;
+    left:220px;
+    border-bottom:none;★
+    background:#fff;★
+} */
+
+.delivery_info_title_bt{
+    width:160px;
+    height:43px;
+    border:2px solid #949494;
+    background:#ececec;
+    font-size:18px;
+    text-align:center;
+    padding-top:7px;
+    box-sizing:border-box;
+    position:absolute;
+    top:819px;
+    left:420px;
+}
+.review_title_bt{
+    width:160px;
+    height:43px;
+    border:2px solid #949494;
+    background:#ececec;
+    font-size:18px;
+    text-align:center;
+    padding-top:7px;
+    box-sizing:border-box;
+    position:absolute;
+    top:819px;
+    left:620px;
+}
+.qa_title_bt{
+    width:160px;
+    height:43px;
+    border:2px solid #949494;
+    background:#ececec;
+    font-size:18px;
+    text-align:center;
+    padding-top:7px;
+    box-sizing:border-box;
+    position:absolute;
+    top:819px;
+    left:820px;
+}
+.review_quantity_box{
+    display:inline-block;
+    width:20px;
+    height:20px;
+    border-radius:5px;
+    background:#181818;
+    position:absolute;
+    top:830px;
+    left:740px;
+}
+.review_quantity{
+    color:#fff;
+    font-size:15px;
+    font-weight:bold;
+    position:absolute;
+    top:830px;
+    left:745px;
+}
+.qa_quantity_box{
+    display:inline-block;
+    width:20px;
+    height:20px;
+    border-radius:5px;
+    background:#181818;
+    position:absolute;
+    top:830px;
+    left:943px;
+}
+.qa_quantity{
+    color:#fff;
+    font-size:15px;
+    font-weight:bold;
+    position:absolute;
+    top:830px;
+    left:948px;
+}
+/* 페이지 메뉴 버튼 라인 ---------- EEEEE */
+
+
+/* 상품상세정보 */
+.product_details_wrap{
+    margin:auto;
+    width:1000px;
+    position:relative;
+    top:90px;
+    /* display:none; */
+}
+.poster_img1{
+    background:url(../images/product_details_info.jpg) no-repeat;
+    display:block;
+    width:1000px;
+    height:5997px;
+}
+.poster_img2{
+    background:url(../images/product_details_info2.jpg) no-repeat;
+    display:block;
+    width:1000px;
+    height:6257px;
+}
+
+/* 배송안내 */
+.delivery_info_wrap{
+    margin:auto;
+    height:1000px;
+    width:1200px;
+    position:relative;
+    top:70px;
+    display:none;
+}
+.delivery_info_wrap h4{
+    font-size:20px;
+    font-weight:bold;
+    margin-bottom:25px;
+}
+.delivery_info_wrap div{
+    height:323px;
+    width:100%;
+    border-bottom:2px solid #999;
+    padding:20px 0 10px 55px;
+    margin-bottom:10px;
+    box-sizing:border-box;
+    line-height:2;
+}
+.delivery_info_wrap .pay_info{
+    padding-top:35px;
+}
+.delivery_info_wrap .shipping_info{
+    padding-top:35px;
+}
+.red_txt{
+    color:red;
+}
+
+/* 상품후기 */
+.review_wrap{
+    margin:auto;
+    height:1000px;
+    width:1200px;
+    position:relative;
+    top:130px;
+    display:none;
+}
+.review_table{
+    width:1000px;
+    border-bottom:2px solid #6d6d6d;
+    box-sizing:border-box;
+    margin-bottom:23px;
+    margin:auto;
+}
+.review_table .thead_cls{
+    height:44px;
+    background-color:#e3e6db;
+    box-sizing:border-box;
+}
+.review_table .thead_cls th{
+    border-top:1px solid #306c2e;
+    border-bottom:1px solid #306c2e;
+    font-size:17px;
+}
+.hit{
+    display:inline-block;
+    text-align:center;
+    letter-spacing:1px;
+    padding-top:3px;
+    width:42px;
+    height:23px;
+    color:#fff;
+    background:rgb(64, 224, 43);
+}
+.review_table tr td{
+    height:70px;
+    border-bottom:1px solid #949494;
+}
+.review_table .td4{
+    color:#949494;
+}
+.review_table .td1,.review_table .td3,.review_table .td4,.review_table .td5{
+    text-align:center;
+}
+.review_wrap .movelist{
+    width:87px;
+    height:20px;
+    margin:auto;
+    position:relative;
+    top:100px;
+}
+.review_wrap .movelist p{
+    float:left;
+}
+.review_wrap .movelist a{
+    float:left;
+    padding:0 13px;
+}
+.before{
+    margin-right:5px;
+}
+.next{
+    margin-left:5px;
+}
+.review_wrap .th1{
+    width:70px;
+}
+.review_wrap .th2{
+    width:550px;
+}
+.review_wrap .th6{
+    width:110px;
+}
+.review_wrap tr span{
+    margin-left:15px;
+}
+.review_wrap .write_review{
+    border:1px solid #181818;
+    background:#2c2c2c;
+    text-align:center;
+    font-size:18px;
+    letter-spacing:1px;
+    padding-top:10px;
+    box-sizing:border-box;
+    width:150px;
+    height:50px;
+    position:relative;
+    top:10px;
+    left:780px;
+}
+.review_wrap .write_review a{
+    color:#fff;
+}
+.review_wrap .view_all{
+    border:1px solid #949494;
+    background:#f0f0f0;
+    text-align:center;
+    font-size:18px;
+    letter-spacing:1px;
+    padding-top:10px;
+    box-sizing:border-box;
+    width:150px;
+    height:50px;
+    position:relative;
+    top:-40px;
+    left:949px;
+}
+
+/* 상품Q&A */
+.qa_wrap{
+    margin:auto;
+    height:1000px;
+    width:1200px;
+    position:relative;
+    top:130px;
+    display:none;
+}
+.qa_table{
+    width:1000px;
+    border-bottom:2px solid #6d6d6d;
+    box-sizing:border-box;
+    margin-bottom:23px;
+    margin:auto;
+}
+.qa_wrap .thead_cls{
+    height:44px;
+    background-color:#e3e6db;
+    box-sizing:border-box;
+}
+.qa_wrap .thead_cls th{
+    border-top:1px solid #306c2e;
+    border-bottom:1px solid #306c2e;
+    font-size:17px;
+}
+.qa_wrap tr td{
+    height:70px;
+    border-bottom:1px solid #949494;
+}
+.qa_wrap .td4{
+    color:#949494;
+}
+.qa_wrap .td1,.qa_wrap .td3,.qa_wrap .td4,.qa_wrap .td5{
+    text-align:center;
+}
+.qa_wrap .movelist{
+    width:87px;
+    height:20px;
+    margin:auto;
+    position:relative;
+    top:100px;
+}
+.qa_wrap .movelist p{
+    float:left;
+}
+.qa_wrap .movelist a{
+    float:left;
+    padding:0 13px;
+}
+.qa_wrap .th1{
+    width:70px;
+}
+.qa_wrap .th2{
+    width:550px;
+}
+.lock_img, .reply_img{
+    display:inline-block;
+}
+.reply_img{
+    margin-right:5px;
+}
+.qa_wrap .tr2 .td2{
+    padding-left:55px
+}
+.qa_wrap .write_qa{
+    border:1px solid #181818;
+    background:#2c2c2c;
+    text-align:center;
+    font-size:18px;
+    letter-spacing:1px;
+    padding-top:10px;
+    box-sizing:border-box;
+    width:150px;
+    height:50px;
+    position:relative;
+    top:10px;
+    left:780px;
+}
+.qa_wrap .write_qa a{
+    color:#fff;
+}
+.qa_wrap .view_all{
+    border:1px solid #949494;
+    background:#f0f0f0;
+    text-align:center;
+    font-size:18px;
+    letter-spacing:1px;
+    padding-top:10px;
+    box-sizing:border-box;
+    width:150px;
+    height:50px;
+    position:relative;
+    top:-40px;
+    left:949px;
+}

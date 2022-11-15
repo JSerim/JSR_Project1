@@ -1,0 +1,138 @@
+/* ----------------------- speed_bar IR ----------------------- */
+.speed_bar_1>a{
+    background:url(../images/speed_bar1.png) no-repeat;
+    display:block;
+    width:49px;
+    height:47px;
+    text-indent:-9999px;
+}
+.speed_bar_1_txtbox{
+    background:url(../images/speed_bar_txtbox1.gif) no-repeat;
+    display:block;
+    width:91px;
+    height:25px;
+}
+.speed_bar_1_all{
+    background:url(../images/speed_bar_1_all.gif) no-repeat;
+    display:block;
+    width:163px;
+    height:36px;
+    text-indent:-9999px;
+}
+.speed_bar_2>a{
+    background:url(../images/speed_bar2.png) no-repeat;
+    display:block;
+    width:50px;
+    height:47px;
+    text-indent:-9999px;
+}
+.speed_bar_2_txtbox{
+    background:url(../images/speed_bar_txtbox2.gif) no-repeat;
+    display:block;
+    width:80px;
+    height:25px;
+}
+.speed_bar_2_all{
+    background:url(../images/speed_bar_2_all.gif) no-repeat;
+    display:block;
+    width:150px;
+    height:36px;
+    text-indent:-9999px;
+}
+.speed_bar_3>a{
+    background:url(../images/speed_bar3.png) no-repeat;
+    display:block;
+    width:49px;
+    height:47px;
+    text-indent:-9999px;
+}
+.speed_bar_3_txtbox{
+    background:url(../images/speed_bar_txtbox3.gif) no-repeat;
+    display:block;
+    width:80px;
+    height:25px;
+}
+.speed_bar_3_all{
+    background:url(../images/speed_bar_3_all.gif) no-repeat;
+    display:block;
+    width:150px;
+    height:36px;
+    text-indent:-9999px;
+}
+.speed_bar_close{
+    background:url(../images/speed_bar_close.png) no-repeat;
+    display:block;
+    width:56px;
+    height:54px;
+    text-indent:-9999px;
+}
+.speed_bar_4>a{
+    background:url(../images/speed_bar4.png) no-repeat;
+    display:block;
+    width:50px;
+    height:47px;
+    text-indent:-9999px;
+}
+.speed_bar_4_txtbox{
+    background:url(../images/speed_bar_txtbox4.gif) no-repeat;
+    display:block;
+    width:58px;
+    height:25px;
+    text-indent:-9999px;
+}
+.speed_bar_5>a{
+    background:url(../images/speed_bar5.png) no-repeat;
+    display:block;
+    width:50px;
+    height:47px;
+    text-indent:-9999px;
+}
+.speed_bar_5_txtbox{
+    background:url(../images/speed_bar_txtbox5.gif) no-repeat;
+    display:block;
+    width:58px;
+    height:25px;
+}
+
+/* ---------------------------speed_bar 디자인--------------------------- */
+.speed_bar{
+    position:fixed;
+    background-color:#fff;
+    border:2px solid #002a03;
+    width:51px;
+    height:239px;
+    right:0;
+    top:400px;
+    z-index:100;
+}
+.speed_bar span{
+    position:absolute;
+}
+.speed_bar_1_txtbox{
+    margin-left:-99px;
+    margin-top:-35px;
+    display:none;
+}
+.speed_bar_2_txtbox{
+    margin-left:-88px;
+    margin-top:-35px;
+    display:none;
+}
+.speed_bar_3_txtbox{
+    margin-left:-88px;
+    margin-top:-36px;
+    display:none;
+}
+.speed_bar_4_txtbox{
+    margin-left:-67px;
+    margin-top:-36px;
+    display:none;
+}
+.speed_bar_5_txtbox{
+    margin-left:-67px;
+    margin-top:-36px;
+    display:none;
+}
+.speed_bar_wrap li{
+    border-bottom:1px solid#002a03;
+}

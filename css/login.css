@@ -1,0 +1,157 @@
+/* ---------------------- login IR ------------------------ */
+.login_title{
+    background:url(../images/login_title.gif) no-repeat;
+    display:block;
+    width:145px;
+    height:39px;
+    text-indent:-9999px;
+}
+.kakao_login{
+    background:url(../images/kakao_login.jpg) no-repeat;
+    display:block;
+    width:55px;
+    height:55px;
+}
+.naver_login{
+    background:url(../images/naver_login.jpg) no-repeat;
+    display:block;
+    width:55px;
+    height:55px;
+}
+.facebook_login{
+    background:url(../images/facebook_login.jpg) no-repeat;
+    display:block;
+    width:55px;
+    height:55px;
+}
+
+/* ---------------------- login 디자인 ------------------------ */
+input{
+    font-size:16px;
+}
+.content{
+    width:1200px;
+    height: 900px;
+    margin:auto;
+    position:relative;
+    z-index:1;
+}
+.login{
+    width:490px;
+    height:716px;
+    margin:auto;
+    margin-top:152px;
+}
+.login_title{
+    margin:auto;
+    margin-bottom:94px;
+}
+.userid_cls{
+    width:490px;
+    height:45px;
+    border-bottom:2px solid #949494;
+    box-sizing:border-box;
+    margin-bottom:42px;
+    padding-left:15px;
+}
+.userpw_cls{
+    width:490px;
+    height:45px;
+    border-bottom:2px solid #949494;
+    box-sizing:border-box;
+    margin-bottom:25px;
+    padding-left:15px;
+}
+.saveid{
+    display:block;
+}
+.saveid input{
+    width:18px;
+    height:18px;
+    margin-right:8px;
+    position:relative;
+    top:4px;
+}
+.btn{
+    width:490px;
+    height:53px;
+    display:block;
+    margin:auto;
+    margin-bottom:35px;
+}
+.login_btn_cls{
+    width:490px;
+    height:53px;
+    background-color:#2d2d2d;
+    color:white; 
+    text-align:center;
+    font-size:18px;
+}
+.login_btn_cls:hover{
+    font-size:21px;
+    font-weight:bold;
+}
+.find_join_wrap{
+    width:490px;
+    height:61px;
+    border-top:2px solid #949494;
+    border-bottom:2px solid #949494;
+    padding-top:17px;
+    margin-bottom:35px;
+    box-sizing:border-box;
+}
+.find_id a{
+    float:left;
+    margin-left:70px;
+}
+.find_id a:after{
+    content:"|";
+    margin:0 25px
+}
+.find_pw a{
+    float:left;
+}
+.find_pw a:after{
+    content:"|";
+    margin:0 25px
+}
+.join a{
+    float:left;
+}
+.other_login{
+    width:375px;
+    height:105px;
+    margin:auto;
+    margin-bottom:35px;
+}
+.other_login span{
+    margin-bottom:9px;
+    position:relative;
+}
+.other_login1{
+    float:left;
+    margin-right:100px;
+    text-align:center;
+}
+.other_login2{
+    float:left;
+    margin-right:100px;
+    text-align:center;
+}
+.other_login3{
+    float:left;
+    text-align:center;
+}
+.nonmb_ordercheck{
+    width:490px;
+    height:55px;
+    text-align:center;
+    font-size:18px;
+    border:2px solid #949494;
+    padding-top:14px;
+    box-sizing:border-box;
+}
+.nonmb_ordercheck:hover{
+    font-size:20px;
+    padding-top:13px;
+}

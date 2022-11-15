@@ -1,0 +1,254 @@
+/* ------------------------ Main IR ---------------------------- */
+.answer{
+    background:url(../images/qa_asw.gif) no-repeat;
+    display:block;
+    width:30px;
+    height:18px;
+    text-indent:-9999px;
+}
+.lock{
+    background:url(../images/qa_lock.gif) no-repeat;
+    display:block;
+    width:15px;
+    height:19px;
+    text-indent:-9999px;
+}
+.new{
+    background:url(../images/qa_new.gif) no-repeat;
+    display:block;
+    width:46px;
+    height:19px;
+    text-indent:-9999px;
+}
+.qa_title{
+    background:url(../images/qa_title.gif) no-repeat;
+    display:block;
+    width:107px;
+    height:29px;
+    text-indent:-9999px;
+}
+.before{
+    background:url(../images/movelist_before.gif) no-repeat;
+    display:block;
+    width:20px;
+    height:20px;
+    text-indent:-9999px;
+}
+.next{
+    background:url(../images/movelist_next.gif) no-repeat;
+    display:block;
+    width:20px;
+    height:20px;
+    text-indent:-9999px;
+}
+
+/* ------------------------ Main 디자인 ---------------------------- */
+
+.content{
+    width:1200px;
+    height: 1500px;
+    margin:auto;
+    position:relative;
+    z-index:1;
+}
+.qa_section{
+    width:940px;
+    height:1225px;
+    margin:auto;
+    position:relative;
+    top:138px;
+    left:65px;
+}
+.qa_title_txt{
+    font-size:18px;
+    color: #949494;
+    position:relative;
+    left:110px;
+    top:-30px;
+}
+.qa_title_txt:before{
+    content:"|";
+    margin:0 15px;
+}
+.row_line{
+    width:940px;
+    height:40px;
+    border-bottom:1px solid #949494;
+    box-sizing:border-box;
+    margin-bottom:52px;
+}
+
+.item_cf_wrap{
+    width:300px;
+    height:31px;
+    margin-bottom:15px;
+}
+.item_cf_cls{
+    width:190px;
+    height:31px;
+    border:1px solid #949494;
+    box-sizing:border-box;
+    padding-left:10px;
+    float:left;
+}
+.item_cf_txt{
+    float:left;
+    margin-right:12px;
+    padding-top:2px;
+}
+.item_cf_txt{
+    margin-right:8px;
+    font-size:20px;
+}
+.item_cf_txt span{
+    margin-right:5px;
+    font-size:20px;
+}
+
+.sc_word_wrap{
+    width:650px;
+    height:31px;
+    margin-bottom:35px;
+}
+.sc_word1_cls{
+    width:105px;
+    height:31px;
+    border:1px solid #949494;
+    box-sizing:border-box;
+    padding-left:10px;
+    float:left;
+    margin-right:14px;
+}
+.sc_word2_cls{
+    width:115px;
+    height:31px; 
+    border:1px solid #949494;
+    box-sizing:border-box;
+    padding-left:10px;
+    float:left;
+    margin-right:14px;
+}
+.sc_word_txt{
+    float:left;
+    margin-right:27px;
+    font-size:20px;
+}
+.sc_word_txt span{
+    margin-right:5px;
+    font-size:20px;
+}
+.sc_word_cls{
+    width:177px;
+    height:31px;
+    float:left;
+    margin-right:10px;
+    border:1px solid #949494;
+    box-sizing:border-box;
+}
+.find_bt_cls{
+    width:105px;
+    height:31px;
+    color:white;
+    background-color:#6d6d6d;
+    border-radius:5px;
+    text-align:center;
+    font-size:18px;
+    float:left;
+    padding-bottom:3px;
+    letter-spacing:2px;
+}
+.writing_bt{
+    display:block;
+    background:#002a03;
+    width: 150px;
+    height: 35px;
+    color:white;
+    text-align:center;
+    padding-top:5px;
+    font-size:18px;
+    position:relative;
+    left:790px;
+    margin-bottom:15px;
+    box-sizing:border-box;
+    letter-spacing:3px;
+}
+
+.qa_table_cls{
+    width:940px;
+    height:900px;
+    text-align:center;
+    border-bottom:3px solid #6d6d6d;
+    box-sizing:border-box;
+    margin-bottom:23px;
+}
+.thead_cls{
+    height:44px;
+    background-color:#e3e6db;
+    box-sizing:border-box;
+}
+.thead_cls th{
+    border-top:1px solid #306c2e;
+    border-bottom:1px solid #306c2e;
+    font-size:17px;
+}
+.tbody_cls{
+    height: 246px;
+    position:relative;
+    top:-607px;
+}
+tr td{
+    height:81px;
+    border-bottom:1px solid #949494;
+}
+.td5, .td6{
+    color:#949494;
+}
+.td5{
+    line-height:1.5;
+}
+.td3{
+    padding-left:30px;
+}
+.td3 p{
+    text-align:left;
+}
+.td3_p1{
+    color: #6d6d6d;
+    margin-bottom:8px;
+}
+.td3 span{
+    display:inline-block;
+    float:left;
+    margin:0 5px;
+}
+.td3_p2{
+    float:left;
+}
+.td3_p{
+    float:left;
+}
+.td3 .answer{
+    margin-right:15px;
+}
+.tr3 .td3{
+    padding-left:70px;
+}
+.movelist{
+    width:413px;
+    height:20px;
+    margin:auto;
+}
+.movelist p{
+    float:left;
+}
+.before{
+    margin-right:5px;
+}
+.next{
+    margin-left:5px;
+}
+.movelist a{
+    float:left;
+    padding:0 13px;
+}
+

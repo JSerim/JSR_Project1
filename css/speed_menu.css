@@ -1,0 +1,47 @@
+/* --------------------- speed_menu IR -------------------- */
+.smenu_notice>a{
+    background:url(../images/smenu_notice.jpg) no-repeat;
+    display:block;
+    width:160px;
+    height:113px;
+    text-indent:-9999px;
+}
+.smenu_event>a{
+    background:url(../images/smenu_event.jpg) no-repeat;
+    display:block;
+    width:160px;
+    height:113px;
+    text-indent:-9999px;
+}
+.smenu_qa>a{
+    background:url(../images/smenu_qa.jpg) no-repeat;
+    display:block;
+    width:160px;
+    height:113px;
+    text-indent:-9999px;
+}
+.smenu_review>a{
+    background:url(../images/smenu_review.jpg) no-repeat;
+    display:block;
+    width:160px;
+    height:113px;
+    text-indent:-9999px;
+}
+
+/* ----------------------- speed_menu 디자인 ---------------------- */
+
+.speed_menu_wrap{
+    width:160px;
+    height:491px;
+    position:absolute;
+    z-index:100;
+}
+.smenu_notice{
+    margin-bottom:13px;
+}
+.smenu_event{
+    margin-bottom:13px;
+} 
+.smenu_qa{
+    margin-bottom:13px;
+}

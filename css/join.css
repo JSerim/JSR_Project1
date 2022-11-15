@@ -1,0 +1,497 @@
+/* -------------------------------------------- Main ---------------------------------------------- */
+.homepage{
+    background:url(../images/homepage.jpg) no-repeat;
+    display:block;
+    width:1600px;
+    height:226px;
+    text-indent:-9999px;
+}
+.join_title{
+    background:url(../images/join_title.gif) no-repeat;
+    display:block;
+    width:109px;
+    height:39px;
+    text-indent:-9999px;
+}
+
+/* ----------------------- Main 디자인 -------------------------- */
+input{
+    font-size:16px;
+}
+
+.content{
+    width:1200px;
+    height: 2300px;
+    margin:auto;
+    position:relative;
+    z-index:1;
+}
+.join{
+    width:690px;
+    height:2250px;
+    margin:auto;
+    margin-top:80px;
+}
+.join_title{
+    margin:auto;
+    margin-bottom:60px;
+}
+.essential{
+    position:relative;
+    top:25px;
+    left:543px;
+    font-size:16px;
+}
+.essential>span{
+    color:red;
+    font-size:30px;
+    position:absolute;
+    left:-18px;
+    top:-8px;
+}
+.join_form_wrap{
+    width:590px;
+    height:648px;
+    margin:auto;
+    margin-bottom:60px;
+}
+.member_type{
+    font-size:18px;
+}
+.member_type input{
+    margin-right:8px;
+    margin-bottom:15px;
+    margin-top:5px;
+}
+.wrap_p{
+    height:65px;
+    box-sizing:border-box;
+}
+.wrap2 input{
+    width:590px;
+    height:40px;
+    padding-left:20px;
+    box-sizing:border-box;
+}
+.wrap2 .u_id{
+    width:440px;
+    margin-right:5px;
+}
+.search_id{
+    width: 140px;
+    height: 40px;
+    border: 1px solid #949494;
+    box-sizing: border-box;
+    position: relative;
+}
+.uid_txt{
+    color:#949494;
+    position:relative;
+    top:-32px;
+    left:170px;
+    font-size:14px;
+}
+.err_id{
+    position:relative;
+    top:-21px;
+}
+.err_pwd{
+    position:relative;
+    top:-21px;
+}
+.uid_txt+.err_txt{
+    position:relative;
+    top:10px
+}
+.upw_txt{
+    color:#949494;
+    position:relative;
+    top:-32px;
+    left:306px;
+    font-size:14px;
+}
+.err_txt{
+    color:red;
+    font-size:14px;
+}
+.req{
+    color:red;
+    font-size:30px;
+    position:absolute;
+    margin-left:5px;
+}
+.ps_code{
+    width:290px;
+    height:40px;
+    margin-bottom:10px;
+    margin-right:5px;
+    padding-left:20px;
+    box-sizing:border-box;
+}
+.search_addr{
+    width:90px;
+    height:40px;
+    border:1px solid #949494;
+    box-sizing:border-box;
+    position:relative;
+}
+.addr_b{
+    width:590px;
+    height:40px;
+    margin-bottom:10px;
+    padding-left:20px;
+    box-sizing:border-box;
+}
+.addr_d{
+    width:590px;
+    height:40px;
+    margin-bottom:20px;
+    padding-left:20px;
+    box-sizing:border-box;
+}
+.mobile{
+    width:590px;
+    height:40px;
+    padding-left:20px;
+    box-sizing:border-box;
+}
+.mobile_txt{
+    color:#949494;
+    position: relative;
+    left:450px;
+    top:-31px;
+    font-size:14px;
+}
+.err_mobile{
+    position:relative;
+    top:-21px;
+}
+.err_codenb{
+    position:relative;
+    top:-12px;
+}
+.codenb_cls{
+        width:340px;
+        height:40px;
+        margin-bottom:11px;
+        margin-right:5px;
+        padding-left:20px;
+        box-sizing:border-box;
+}
+.getnb_cls{
+    width:240px;
+    height:40px;
+    border:1px solid #949494;
+    box-sizing:border-box;
+    border-radius:10px;
+}
+.email_id{
+    width:184px;
+    height:40px;
+    border:1px solid #949494;
+    box-sizing:border-box;
+    padding-left:20px;
+}
+.email_dns{
+    width:184px;
+    height:40px;
+    border:1px solid #949494;
+    box-sizing:border-box;
+    padding-left:20px;
+}
+.email_sel{
+    width:182px;
+    height:40px;
+    border:1px solid #949494;
+    box-sizing:border-box;
+    padding-left:20px;
+    margin-left:4.5px;
+}
+.email_symbol{
+    font-size:18px;
+}
+/* --------------------------- 추가정보 ------------------------------ */
+.add_info_wrap{
+    width:590px;
+    height:450px;
+    margin:auto;
+    margin-bottom:60px;
+}
+.add_info{
+    font-size:25px;
+    font-weight:bold;
+    margin-bottom:14px;
+}
+.gender_wrap{
+    width:590px;
+    height:57px;
+    border-bottom:1px solid #949494;
+    padding:17px 33px;
+    box-sizing:border-box;
+}
+.gender_title{
+    float:left;
+    font-size:18px;
+    margin-right:139px;
+}
+.gender1{
+    font-size:18px;
+    margin-right:25px;
+}
+.gender1>input{
+    margin-right:5px;
+}
+    
+.gender2{
+    font-size:18px;
+}
+.gender2>input{
+    margin-right:5px;
+}
+
+.bd_wrap{
+    width:590px;
+    height:85px;
+    border-bottom:1px solid #949494;
+    padding-left:33px;
+    padding-top:14px;
+    box-sizing:border-box;
+}
+
+.bd_title{
+    float:left;
+    font-size:18px;
+    margin-right:110px;
+    margin-top:15px;
+}
+.birth{
+    width:180px;
+    height:40px;
+    border:1px solid #949494;
+    box-sizing:border-box;
+    margin-right:25px;
+    padding-left:20px;
+}
+.bd_txt{
+    color: #949494;
+    position: relative;
+    left:178px;
+    font-size: 14px;
+}
+.bd_radio{
+    position:relative;
+    top:-60px;
+    left:379px;
+}
+.calendar1{
+    display:inline-block;
+    font-size:18px;
+    margin-top:15px;
+    margin-right:15px;
+}
+.calendar1>input{
+    margin-left:13px;
+    margin-right:5px;
+}
+.calendar2{
+    display:inline-block;
+    font-size:18px;
+    margin-top:15px;
+}
+.calendar2>input{
+    margin-right:5px;
+}
+.refund_info_wrap{
+    width:590px;
+    height:262px;
+    border-bottom:1px solid #949494;
+    padding-left:33px;
+    box-sizing:border-box;
+}
+.refund_info_title{
+    float:left;
+    font-size:18px;
+    margin-right:70px;
+    padding-top:112px;
+    padding-bottom:60px;
+}
+.refund_info_wrap li{
+    padding-top:30px;
+}
+.refund_stt{
+    width:90px;
+    display:inline-block;
+}
+.accnm_cls{
+    width:250px;
+    height:40px;
+    border:1px solid #949494;
+    box-sizing:border-box;
+    padding-left:20px;
+}
+.accnb_txt{
+    color: #949494;
+    position: relative;
+    left:270px;
+    font-size: 14px;
+}
+.bank_sel{
+    width:250px;
+    height:40px;
+    border:1px solid #949494;
+    box-sizing:border-box;
+    padding-left:20px;
+}
+.accnb_cls{
+    width:250px;
+    height:40px;
+    border:1px solid #949494;
+    box-sizing:border-box;
+    padding-left:20px;
+}
+.bank_sel_txt{
+    margin-left:251px;
+}
+
+/* --------------------------- 약관동의 ------------------------------ */
+.all_agree_cls{
+    display:block;
+    font-size:20px;
+    font-weight:bold;
+    position:relative;
+    left:520px;
+    margin-bottom:15px;
+}
+.all_agree_cls input{
+    width:25px;
+    height:25px;
+    margin-right:10px;
+    position:relative;
+    top:6px;
+}
+.req_agree{
+    color:red;
+    font-size:30px;
+    position:relative;
+    top:6px;
+    margin-right:3px;
+}
+.agree1{
+    width:690px;
+    height:166px;
+    overflow:scroll;
+    margin:auto;
+    border:1px solid #949494;
+    box-sizing:border-box;
+}
+.agree1_txt{
+    font-size:16px;
+    position:relative;
+    left:400px;
+    margin-bottom:20px;
+}
+.agree1_ckb{
+    font-size:16px;
+}
+.agree1_ckb input{
+    position:relative;
+    top:4px;
+}
+.agree1_cls{
+    width:20px;
+    height:20px;
+    margin-right:7px;
+}
+.err_agree1{
+    position:relative;
+    left:140px;
+}
+.err_agree2{
+    position:relative;
+    left:227px;
+}
+.agree2{
+    width:690px;
+    height:166px;
+    overflow:scroll;
+    margin:auto;
+    border:1px solid #949494;
+    box-sizing:border-box;
+}
+.agree2_txt{
+    font-size:16px;
+    position:relative;
+    left:313px;
+    margin-bottom:20px;
+}
+.agree2_ckb{
+    font-size:16px;
+}
+.agree2_ckb input{
+    position:relative;
+    top:4px;
+}
+.agree2_cls{
+    width:20px;
+    height:20px;
+    margin-right:7px;
+}
+.agree3{
+    width:690px;
+    height:166px;
+    overflow:scroll;
+    margin:auto;
+    border:1px solid #949494;
+    box-sizing:border-box;
+    margin-bottom:8px;
+}
+.agree3_txt{
+    font-size:16px;
+    position:relative;
+    left: 408px;
+    margin-bottom:3px;
+}
+.agree3_ckb{
+    font-size:16px;
+}
+.agree3_ckb input{
+    position:relative;
+    top:4px;
+}
+.agree3_cls{
+    width:20px;
+    height:20px;
+    margin-right:7px;
+}
+.agree4_txt{
+    font-size:16px;
+    position:relative;
+    left:397px;
+}
+.agree4_ckb{
+    font-size:16px;
+}
+.agree4_ckb input{
+    position:relative;
+    top:4px;
+}
+.agree4_cls{
+    width:20px;
+    height:20px;
+    margin-right:7px;
+}
+.btn{
+    width:490px;
+    height:53px;
+    display:block;
+    margin:auto;
+    margin-top:80px;
+}
+.join_sbm_cls{
+    width:490px;
+    height:53px;
+    background-color:#2d2d2d;
+    color:white;
+    text-align:center;
+    font-size:18px;
+}
