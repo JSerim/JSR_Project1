@@ -1,3 +1,6 @@
+<?php
+include "inc/session.php";
+?>
 <!DOCTYPE html>
 <html lang="ko">
 <head>
@@ -38,7 +41,7 @@
 </head>
 <body class="p-0">
     
-<?php include "inc/header.php"; ?>
+<?php include "inc/header_index.php"; ?>
 
     <main id="content" class="content">
 

@@ -161,7 +161,8 @@
     background:#002a03;
     width:100%; 
     height:40px;
-    margin-top:20px;
+    position:relative;
+    top:11px;
 }
 .footer_bottom p{
     color:#fff;

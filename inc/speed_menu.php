@@ -1,3 +1,7 @@
+<link rel="stylesheet" type="text/css" href="../css/speed_menu.css">
+<script type="text/javascript" src="../js/jquery-3.6.1.min.js"></script>
+<script type="text/javascript" src="../js/speed_menu.js"></script>
+
 <article class="speed_menu">
     <h2 class="hide">많이 찾는 메뉴 바로가기</h2>
     <ul class="speed_menu_wrap">

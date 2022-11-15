@@ -1,3 +1,7 @@
+<link rel="stylesheet" type="text/css" href="../css/speed_bar.css">
+<script type="text/javascript" src="../js/jquery-3.6.1.min.js"></script>
+<script type="text/javascript" src="../js/speed_bar.js"></script>
+
 <div class="speed_bar">
     <h2 class="hide">간편 편의기능 바</h2>
     <ul class="speed_bar_wrap">

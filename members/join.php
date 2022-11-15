@@ -1,3 +1,6 @@
+<?php
+include "../inc/session.php";
+?>
 <!DOCTYPE html>
 <html lang="ko">
 <head>
@@ -8,23 +11,14 @@
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
     <!-- CSS -->
     <link rel="stylesheet" type="text/css" href="../css/join.css">
-    <link rel="stylesheet" type="text/css" href="../css/header.css">
-    <link rel="stylesheet" type="text/css" href="../css/footer.css">
-    <link rel="stylesheet" type="text/css" href="../css/search.css">
-    <link rel="stylesheet" type="text/css" href="../css/speed_bar.css">
-    <link rel="stylesheet" type="text/css" href="../css/speed_menu.css">
     <!-- JS -->
     <script type="text/javascript" src="../js/join_form.js"></script>
-    <script type="text/javascript" src="../js/header.js"></script>
-    <script type="text/javascript" src="../js/search.js"></script>
-    <script type="text/javascript" src="../js/speed_bar.js"></script>
-    <script type="text/javascript" src="../js/speed_menu.js"></script>
     
     <script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
 
 </head>
 <body>
-<?php include "../inc/header.php"; ?>
+<?php include "../inc/header_sub.php"; ?>
 <?php/*  include "../inc/search.php";  */?>
 <?php include "../inc/speed_bar.php"; ?>
 <?php include "../inc/speed_menu.php"; ?>
@@ -34,9 +28,10 @@
             <h2 class="join_title">회원가입</h2>
             <form name="join" action="insert.php" method="post" onsubmit="return form_check()">
         
-                <p class="essential"><span>*</span>필수입력사항</p>
-
+                
                 <fieldset class="join_form_wrap">
+                    <p class="essential"><span>*</span>필수입력사항</p>
+                    
                     <legend class="hide">정보입력</legend>
                     <label class="member_type"><input type="radio" name="user_type" id="individual" value="개인" checked>개인회원</label>
                     <label class="member_type"><input type="radio" name="user_type" id="entrepreneur" value="사업자">사업자회원</label>

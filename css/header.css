@@ -223,10 +223,39 @@ body a:hover{
 }
 .top_menu_wrap{
     height:33px;
-    width:408px;
     position:absolute;
-    margin-left: 790px;
-    margin-top:5px;
+    top:4px;
+    right:10px;
+}
+.prt_name{
+    font-size:19px;
+    float:left;
+    font-weight:900;
+    position: relative;
+    top:3px;
+    right:10px;
+    padding-left:5px;
+    padding-right:10px;
+}
+.logout{
+    font-size:19px;
+    float:left;
+    font-weight:900;
+    position: relative;
+    top:3px;
+    right:10px;
+    padding-left:5px;
+    padding-right:10px;
+}
+.admin_page{
+    font-size:19px;
+    float:left;
+    font-weight:900;
+    position: relative;
+    top:3px;
+    right:10px;
+    padding-left:5px;
+    padding-right:10px;
 }
 .language{
     text-align:center;

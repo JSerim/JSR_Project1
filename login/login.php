@@ -1,3 +1,6 @@
+<?php
+include "../inc/session.php";
+?>
 <!DOCTYPE html>
 <html lang="ko">
 <head>
@@ -8,20 +11,18 @@
     <script type="text/javascript" src="../js/jquery-3.6.1.min.js"></script>
     <!-- CSS -->
     <link rel="stylesheet" type="text/css" href="../css/login.css">
-    <link rel="stylesheet" type="text/css" href="../css/header.css">
     <link rel="stylesheet" type="text/css" href="../css/footer.css">
     <link rel="stylesheet" type="text/css" href="../css/search.css">
     <link rel="stylesheet" type="text/css" href="../css/speed_bar.css">
     <link rel="stylesheet" type="text/css" href="../css/speed_menu.css">
     <!-- JS -->
     <script type="text/javascript" src="../js/login.js"></script>
-    <script type="text/javascript" src="../js/header.js"></script>
     <script type="text/javascript" src="../js/search.js"></script>
     <script type="text/javascript" src="../js/speed_bar.js"></script>
     <script type="text/javascript" src="../js/speed_menu.js"></script>
 </head>
 <body>
-<?php include "../inc/header.php"; ?>
+<?php include "../inc/header_sub.php"; ?>
 <?php/*  include "../inc/search.php";  */?>
 <?php include "../inc/speed_bar.php"; ?>
 <?php include "../inc/speed_menu.php"; ?>
@@ -29,19 +30,19 @@
         <section class="login">
             <h2 class="login_title">로그인</h2>
 
-            <form name="login_form" method="post" action="">
+            <form name="login_form" method="post" action="login_ok.php" onsubmit="return login_form_check()">
             
                 <fieldset class="login_form_wrap">
                     <legend class="hide">로그인 정보 입력</legend>
-                    <p class="userid"><input type="text" class="userid_cls" name="userid_nm" id="userid_id" placeholder="아이디" required autofocus></p>
-                    <p class="userpw"><input type="password" class="userpw_cls" name="userpw_nm" id="userpw_id" placeholder="비밀번호 (영문, 숫자, 특수문자 조합)" required></p>
+                    <p class="userid"><input type="text" class="u_id" name="u_id" id="u_id" placeholder="아이디" autofocus></p>
+                    <p class="userpw"><input type="text" class="pwd" name="pwd" id="pwd" placeholder="비밀번호 (영문, 숫자, 특수문자 조합)"></p>
                     <label class="saveid"><input type="checkbox" class="saveid_cls" name="saveid_nm" id="saveid_id">아이디 저장</label><br>
                     <span class="btn"><button type="submit" class="login_btn_cls" name="login_btn_nm" id="login_btn_id">로그인</button></span>
 
                     <div class="find_join_wrap">
                         <p class="find_id"><a href="#">아이디찾기</a></p>
                         <p class="find_pw"><a href="#">비밀번호찾기</a></p>
-                        <p class="join"><a href="#">회원가입</a></p>
+                        <p class="join"><a href="./members/join.php">회원가입</a></p>
                     </div>
 
                     <div class="other_login">

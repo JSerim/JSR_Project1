@@ -46,7 +46,7 @@ input{
     margin:auto;
     margin-bottom:94px;
 }
-.userid_cls{
+.u_id{
     width:490px;
     height:45px;
     border-bottom:2px solid #949494;
@@ -54,7 +54,7 @@ input{
     margin-bottom:42px;
     padding-left:15px;
 }
-.userpw_cls{
+.pwd{
     width:490px;
     height:45px;
     border-bottom:2px solid #949494;
