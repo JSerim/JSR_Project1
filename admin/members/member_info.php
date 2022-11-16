@@ -1,8 +1,9 @@
 <?php 
 include "../inc/session.php";
 include "../inc/login_check.php";
+$g_idx =  $_GET["g_idx"];
 include "../inc/dbcon.php";
-$sql = "select * from members where idx=$s_idx;";
+$sql = "select * from members where idx=$g_idx;";
 $result = mysqli_query($dbcon, $sql);
 $array = mysqli_fetch_array($result);
 ?>
@@ -16,7 +17,7 @@ $array = mysqli_fetch_array($result);
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
     <script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
     <!-- CSS -->
-    <link rel="stylesheet" type="text/css" href="../css/join.css">
+    <link rel="stylesheet" type="text/css" href="../../css/join.css">
     <style type="text/css">
         .title{
             display:inline-block;
@@ -83,7 +84,7 @@ $array = mysqli_fetch_array($result);
     function mem_del(){
         var rtn_val = confirm("정말 탈퇴하시겠습니까?");
         if(rtn_val==true){
-            location.href="member_delete.php";
+            location.href="member_delete.php?g_idx=<?php echo $g_idx; ?>";
         };
     };
 </script>

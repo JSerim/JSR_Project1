@@ -1,6 +1,7 @@
 <?php
 include "../inc/session.php";
 /* --------------- 1. 데이터가져오기 --------------- */
+$g_idx = $_POST["g_idx"];
 $u_type = $_POST["user_type"];
 $pwd = $_POST["pwd"];
 $ps_code = $_POST["ps_code"];
@@ -57,7 +58,7 @@ $sql_yPwd .= "bank='$bank', ";
 $sql_yPwd .= "account_nb='$account', ";
 $sql_yPwd .= "sms_apply='$sms_apply', ";
 $sql_yPwd .= "email_apply='$email_apply' ";
-$sql_yPwd .= "where idx=$s_idx; ";
+$sql_yPwd .= "where idx=$g_idx; ";
 // echo $sql_yPwd;
 
 // 비밀번호 미변경시
@@ -76,7 +77,7 @@ $sql_nPwd .= "bank='$bank', ";
 $sql_nPwd .= "account_nb='$account', ";
 $sql_nPwd .= "sms_apply='$sms_apply', ";
 $sql_nPwd .= "email_apply='$email_apply' ";
-$sql_nPwd .= "where idx=$s_idx; ";
+$sql_nPwd .= "where idx=$g_idx; ";
 // echo $sql_nPwd;
 
 /* ---------------- 4. 데이터베이스에 쿼리 전송 ----------------- */
@@ -93,6 +94,6 @@ mysqli_close($dbcon);
 echo "
 <script type=\"text/javascript\">
 alert('회원정보가 수정되었습니다.');
-location.href = \"member_info.php\";
+location.href = \"member_info.php?g_idx=$g_idx\";
 </script>";
 ?>

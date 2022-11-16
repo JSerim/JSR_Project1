@@ -1,18 +1,7 @@
 <?php
 
-/* 1. 데이터 가져오기 */
-
-// 1-1. post 방식 활용, 이전 페이지에 hidden 필드 사용
-/* <input type="hidden" name="g_idx" value="<?php echo $array["idx"];?>"> */
-// $s_idx = $_POST["g_idx"];
-
-// 1-2. get 방식 활용, 페이지 경로에 데이터 포함
-/* location.href="member_delete.php?g_idx=<?php echo $array["idx"];?>"; */
-// $s_idx = $_GET["g_idx"];
-
-// 1-3. 세션 활용
+/* 1. 데이터 가져오기 - 세션 */
 include "../inc/session.php";
-
 
 /* 2. DB 연결 */
 include "../inc/dbcon.php";

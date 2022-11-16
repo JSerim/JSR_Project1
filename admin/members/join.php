@@ -10,10 +10,10 @@ include "../inc/session.php";
     <title>TEAZEN 회원가입</title>
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
     <!-- CSS -->
-    <link rel="stylesheet" type="text/css" href="../css/join.css">
+    <link rel="stylesheet" type="text/css" href="../../css/join.css">
     <!-- JS -->
     <script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
-    <script type="text/javascript" src="../js/join_form.js"></script>
+    <script type="text/javascript" src="../../js/join_form.js"></script>
     <script type="text/javascript">
         function id_search(){
         window.open("id_search.php", "idsch", "width=600 height=300");
