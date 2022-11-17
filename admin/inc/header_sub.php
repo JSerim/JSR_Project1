@@ -140,7 +140,7 @@
             </li>
             <li class="gnb7"><a href="#">고객센터</a>
                 <ul class="gnb7_wrap">
-                    <li><a href="#">공지사항</a></li>
+                    <li><a href="../notice/list.php">공지사항</a></li>
                     <li><a href="#">자주하는 질문</a></li>
                     <li><a href="#">Q&A</a></li>
                     <li><a href="#">티젠 생생리뷰</a></li>
@@ -165,7 +165,7 @@
                 <span class="prt_name"><?php echo $s_name; ?>님, 안녕하세요.</span>
                 <li class="logout"><a href="../login/logout.php">로그아웃</a></li>
                 <li class="top_m3"><a href="../members/mypage.php">마이페이지</a></li>
-                <li class="admin_page"><a href="../admin.php">[관리자 페이지]</a></li>
+                <li class="admin_page"><a href="../admin_index.php">[관리자 페이지]</a></li>
             <?php } else { ?>
             <!-- 로그인 후 -->
                 <span class="prt_name"><?php echo $s_name; ?>님, 안녕하세요.</span>

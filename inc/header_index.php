@@ -140,7 +140,7 @@
             </li>
             <li class="gnb7"><a href="#">고객센터</a>
                 <ul class="gnb7_wrap">
-                    <li><a href="#">공지사항</a></li>
+                    <li><a href="notice/list.php">공지사항</a></li>
                     <li><a href="#">자주하는 질문</a></li>
                     <li><a href="#">Q&A</a></li>
                     <li><a href="#">티젠 생생리뷰</a></li>
