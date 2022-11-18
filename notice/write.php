@@ -9,7 +9,6 @@ include "../inc/admin_check.php";
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>공지사항 글쓰기</title>
-    <link rel="stylesheet" type="text/css" href="../../css/join_php.css">
     <style type="text/css">
         body{font-size:20px;}
     </style>

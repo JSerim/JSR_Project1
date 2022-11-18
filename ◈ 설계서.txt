@@ -146,3 +146,20 @@
 4. DB, 쿼리 연동
 5. DB 접속 종료
 6. 리디렉션
+
+-------------------------------------------------------------
+게시판
+board table
+
+create table board(
+    idx int auto_increment primary key,
+    writer varchar(20) not null,
+    b_pwd varchar(20) not null,
+    b_title varchar(255) not null,
+    b_content text not null,
+    w_date date,
+    cate varchar(15),
+    f_name varchar(50),
+    f_type varchar(50),
+    f_size varchar(50)
+);

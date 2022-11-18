@@ -142,7 +142,7 @@
                 <ul class="gnb7_wrap">
                     <li><a href="../notice/list.php">공지사항</a></li>
                     <li><a href="#">자주하는 질문</a></li>
-                    <li><a href="#">Q&A</a></li>
+                    <li><a href="../board/list.php">Q&A</a></li>
                     <li><a href="#">티젠 생생리뷰</a></li>
                     <li><a href="#">사업자회원등록</a></li>
                 </ul>
