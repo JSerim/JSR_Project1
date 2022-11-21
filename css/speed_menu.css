@@ -29,6 +29,10 @@
 }
 
 /* ----------------------- speed_menu 디자인 ---------------------- */
+.speed_menu{
+    position:relative;
+    top:115px;
+}
 
 .speed_menu_wrap{
     width:160px;
