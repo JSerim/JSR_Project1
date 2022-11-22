@@ -1,6 +1,6 @@
 <?php
 include "../inc/session.php";
-include "../inc/login_check.php";
+include "../inc/admin_check.php";
 ?>
 <!DOCTYPE html>
 <html lang="ko">
@@ -9,7 +9,7 @@ include "../inc/login_check.php";
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Q&A 글쓰기</title>
-    <link rel="stylesheet" type="text/css" href="../css/board_write.css">
+    <link rel="stylesheet" type="text/css" href="../../css/board_write.css">
 
     <script>
             function board_check(){

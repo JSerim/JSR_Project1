@@ -1,8 +1,8 @@
 <link rel="stylesheet" type="text/css" href="../css/search.css">
-<script type="text/javascript" src="../js/jquery-3.6.1.min.js"></script>
 <script type="text/javascript" src="../js/search.js"></script>
 
 <article class="search_screen">
+    <span class="background"></span>
     <div class="search_screen_top">
         <form action="" method="">
             <fieldset>

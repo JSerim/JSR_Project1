@@ -68,7 +68,7 @@ if($e_pageNum > $total_page){
     <title>TEAZEN Q&A</title>
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
     <!-- CSS -->
-    <link rel="stylesheet" type="text/css" href="../css/board_list.css">
+    <link rel="stylesheet" type="text/css" href="../../css/board_list.css">
     <!-- JS -->
     <script type="text/javascript">
         function sel_cate(){

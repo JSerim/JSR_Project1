@@ -92,9 +92,9 @@ $array = mysqli_fetch_array($result);
 <?php include "../inc/header_sub.php"; ?>
 <?php/*  include "../inc/search.php";  */?>
 <?php include "../inc/speed_bar.php"; ?>
-<?php include "../inc/speed_menu.php"; ?>
 
-    <main id="content" class="content">
+<main id="content" class="content">
+        <?php include "../inc/speed_menu.php"; ?>
         <section class="join">
             <span class="title"></span><h2 class="modify_title">회원정보수정</h2>
             <form name="join" action="edit.php" method="post" onsubmit="return edit_form_check()">

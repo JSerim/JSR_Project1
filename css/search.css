@@ -1,4 +1,4 @@
-/* 검색창
+/* ----------------------------------- IR ----------------------------------- */
 .ssc_bt{
     background:url(../images/ssc_bt.jpg) no-repeat;
     display:block;
@@ -12,4 +12,17 @@
     width:55px;
     height:55px;
     text-indent:-9999px;
-} */
+}
+
+/* ----------------------------------- 검색창 디자인 ----------------------------------- */
+.search_screen{
+    width:100%;
+    height:100%;
+}
+.background{
+    display:block;
+    width:100%;
+    height:100%;
+    background:#000;
+    opacity:20%;
+}

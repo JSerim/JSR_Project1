@@ -1,5 +1,5 @@
 /* CSS Reset */
-header,main,footer,nav,h1,h2,h3,div,ul,ol,li,dl,dt,dd,p,a,article,form,fieldset,legend,span,button,video,address,input{
+header,main,footer,nav,h1,h2,h3,h4,div,ul,ol,li,dl,dt,dd,p,a,article,form,fieldset,legend,span,button,video,address,input{
     margin:0;
     padding:0;
 }

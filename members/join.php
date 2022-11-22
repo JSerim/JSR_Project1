@@ -25,140 +25,139 @@ include "../inc/session.php";
 <?php include "../inc/header_sub.php"; ?>
 <?php/*  include "../inc/search.php";  */?>
 <?php include "../inc/speed_bar.php"; ?>
-<?php include "../inc/speed_menu.php"; ?>
 
-    <main id="content" class="content">
-        <section class="join">
-            <h2 class="join_title">회원가입</h2>
-            <form name="join" action="insert.php" method="post" onsubmit="return form_check()">
-        
+<main id="content" class="content">
+    <?php include "../inc/speed_menu.php"; ?>
+
+    <section class="join">
+        <h2 class="join_title">회원가입</h2>
+        <form name="join" action="insert.php" method="post" onsubmit="return form_check()">
+            <fieldset class="join_form_wrap">
+                <p class="essential"><span>*</span>필수입력사항</p>
+                <legend class="hide">정보입력</legend>
                 
-                <fieldset class="join_form_wrap">
-                    <p class="essential"><span>*</span>필수입력사항</p>
-                    
-                    <legend class="hide">정보입력</legend>
-                    <label class="member_type"><input type="radio" name="user_type" id="individual" value="개인" checked>개인회원</label>
-                    <label class="member_type"><input type="radio" name="user_type" id="entrepreneur" value="사업자">사업자회원</label>
-                    <label class="member_type"><input type="radio" name="user_type" id="foreigner" value="외국인">외국인회원(foreigner)</label><br>
+                <label class="member_type"><input type="radio" name="user_type" id="individual" value="개인" checked>개인회원</label>
+                <label class="member_type"><input type="radio" name="user_type" id="entrepreneur" value="사업자">사업자회원</label>
+                <label class="member_type"><input type="radio" name="user_type" id="foreigner" value="외국인">외국인회원(foreigner)</label><br>
 
-                    <div class="wrap2">
-                        <p class="wrap_p">
-                            <span class="req">*</span>
-                            <input type="text" class="u_name" name="u_name" id="u_name" placeholder="이름" onchange="pass_nm()">
-                            <br><span class="err_txt" id="err_nm"></span>
-                        </p>
-                        <p class="wrap_p">
-                            <span class="req">*</span>
-                            <input type="text" class="u_id" name="u_id" id="u_id" placeholder="아이디" onchange="pass_id()">
-                            <button type="button" class="search_id" name="search_id" id="search_id" onclick="id_search()">아이디 중복 확인</button>
-                            <br><span class="uid_txt">(아이디는 4~12글자만 입력할 수 있습니다.)</span>
-                            <br><span class="err_txt err_id" id="err_id"></span>
-                        </p>
-                        <p class="wrap_p">
-                            <span class="req">*</span>
-                            <input type="text" class="pwd" name="pwd" id="pwd" placeholder="비밀번호" onchange="pass_pw()">
-                            <br><span class="upw_txt">(비밀번호는 4~12글자만 입력할 수 있습니다.)</span>
-                            <br><span class="err_txt err_pwd" id="err_pwd"></span>
-                        </p>
-                        <p class="wrap_p">
-                            <span class="req">*</span>
-                            <input type="text" class="pwdck" name="pwdck" id="pwdck" placeholder="비밀번호 확인" onchange="pass_pwck()">
-                            <br><span class="err_txt" id="err_pwdck"></span>
-                        </p>
+                <div class="wrap2">
+                    <p class="wrap_p">
+                        <span class="req">*</span>
+                        <input type="text" class="u_name" name="u_name" id="u_name" placeholder="이름" onchange="pass_nm()">
+                        <br><span class="err_txt" id="err_nm"></span>
+                    </p>
+                    <p class="wrap_p">
+                        <span class="req">*</span>
+                        <input type="text" class="u_id" name="u_id" id="u_id" placeholder="아이디" onchange="pass_id()">
+                        <button type="button" class="search_id" name="search_id" id="search_id" onclick="id_search()">아이디 중복 확인</button>
+                        <br><span class="uid_txt">(아이디는 4~12글자만 입력할 수 있습니다.)</span>
+                        <br><span class="err_txt err_id" id="err_id"></span>
+                    </p>
+                    <p class="wrap_p">
+                        <span class="req">*</span>
+                        <input type="text" class="pwd" name="pwd" id="pwd" placeholder="비밀번호" onchange="pass_pw()">
+                        <br><span class="upw_txt">(비밀번호는 4~12글자만 입력할 수 있습니다.)</span>
+                        <br><span class="err_txt err_pwd" id="err_pwd"></span>
+                    </p>
+                    <p class="wrap_p">
+                        <span class="req">*</span>
+                        <input type="text" class="pwdck" name="pwdck" id="pwdck" placeholder="비밀번호 확인" onchange="pass_pwck()">
+                        <br><span class="err_txt" id="err_pwdck"></span>
+                    </p>
+                </div>
+
+                <p>
+                    <input type="text" class="ps_code" name="ps_code" id="ps_code" placeholder="우편번호">
+                    <button type="button" class="search_addr" name="search_addr" id="search_addr" onclick="sample6_execDaumPostcode()"> 주소검색</button><br>
+                    <input type="text" class="addr_b" name="addr_b" id="addr_b" placeholder="기본주소"><br>
+                    <input type="text" class="addr_d addr2" name="addr_d" id="addr_d" placeholder="상세주소"><br>
+                </p>
+
+                <p class="wrap_p">
+                    <span class="req">*</span>
+                    <input type="text" class="mobile" name="mobile" id="mobile" placeholder="휴대전화" onchange="pass_tel()">
+                    <br><span class="mobile_txt">("-" 없이 숫자만 입력)</span>
+                    <br><span class="err_txt err_mobile" id="err_mobile"></span>
+                </p>
+
+                <p class="wrap_p">
+                    <span class="req">*</span>
+                    <input type="text" class="codenb_cls" name="codenb_nm" id="codenb_id" placeholder="인증번호입력" onchange="pass_codenb()">
+                    <button type="button" class="getnb_cls" name="getnb_nm" id="getnb_id">인증번호 받기</button>
+                    <br><span class="err_txt err_codenb" id="err_coden"></span>
+                </p>
+
+                <p class="wrap_p">
+                    <span class="req">*</span>
+                    <input type="text" class="email_id" name="email_id" id="email_id" placeholder="이메일" onchange="pass_email1()">
+                    <span class="email_symbol">@</span>
+                    <input type="text" class="email_dns" name="email_dns" id="email_dns" placeholder="이메일 주소" onchange="pass_email2()">
+                    <select class="email_sel" name="email_sel" id="email_sel" onchange="change_email()">
+                        <option value="">-이메일 선택-</option>
+                        <option value="naver.com">naver.com</option>
+                        <option value="daum.net">daum.net</option>
+                        <option value="nate.com">nate.com</option>
+                        <option value="hotmail.com">hotmail.com</option>
+                        <option value="yahoo.com">yahoo.com</option>
+                        <option value="empas.com">empas.com</option>
+                        <option value="korea.com">korea.com</option>
+                        <option value="dreamwiz.com">dreamwiz.com</option>
+                        <option value="gmail.com">gmail.com</option>
+                        <option value="">직접입력</option>
+                    </select>
+                    <br><span class="err_txt" id="err_email"></span>
+                </p>
+            </fieldset> 
+
+                <fieldset class="add_info_wrap">
+                    <legend class="add_info">추가정보</legend>
+                    <div class="gender_wrap">
+                        <h4 class="gender_title">성별</h4>
+                            <label class="gender1"><input type="radio" name="gender" id="male_id" value="남" checked>남자</label>
+                            <label class="gender2"><input type="radio" name="gender" id="female_id" value="여">여자</label>
                     </div>
+                    <div class="bd_wrap">
+                        <h4 class="bd_title">생년월일</h4>
+                            <input type="text" class="birth" name="birth" id= "birth" size="10">
+                            <br><span class="bd_txt">(ex. 20221009)</span><br>
+                            <span class="bd_radio">
+                                <label class="calendar1"><input type="radio" name="calender" id="solar_id" value="양력" checked>양력</label>
+                                <label class="calendar2"><input type="radio" name="calender" id="lunar_id" value="음력">음력</label>
+                            </span>
+                    </div>
+                    <div class="refund_info_wrap">
+                        <h4 class="refund_info_title">환불계좌 정보</h4>
+                            <ul>
+                                <li class="refund_li1">
+                                    <span class="refund_stt">＊ 예금주</span>
+                                    <input type="text"class="accnm_cls" name="accnm_nm" id="accnm_id">
+                                </li>
+                                <li class="refund_li2">
+                                    <span class="refund_stt">＊ 은행명</span>
+                                    <select name="bank_sel" id="bank_sel" class="bank_sel">
+                                        <option value="" disabled>- 은행선택 -</option>
+                                        <option value="신한은행">신한은행</option>
+                                        <option value="우리은행">우리은행</option>
+                                        <option value="농협은행">농협은행</option>
+                                        <option value="하나은행">하나은행</option>
+                                        <option value="국민은행">국민은행</option>
+                                        <option value="">직접입력</option>
+                                    </select>
+                                </li>
+                                <li class="refund_li3">
+                                    <span class="refund_stt">＊ 계좌번호</span>
+                                    <input type="text" class ="accnb_cls" name="accnb_nm" id="accnb_id">
+                                    <br><span class="accnb_txt">("-"와 숫자만 입력)</span>
+                                </li>
+                            </ul>
+                    </div>
+                </fieldset>
 
-                    <p>
-                        <input type="text" class="ps_code" name="ps_code" id="ps_code" placeholder="우편번호">
-                        <button type="button" class="search_addr" name="search_addr" id="search_addr" onclick="sample6_execDaumPostcode()"> 주소검색</button><br>
-                        <input type="text" class="addr_b" name="addr_b" id="addr_b" placeholder="기본주소"><br>
-                        <input type="text" class="addr_d addr2" name="addr_d" id="addr_d" placeholder="상세주소"><br>
-                    </p>
-
-                    <p class="wrap_p">
-                        <span class="req">*</span>
-                        <input type="text" class="mobile" name="mobile" id="mobile" placeholder="휴대전화" onchange="pass_tel()">
-                        <br><span class="mobile_txt">("-" 없이 숫자만 입력)</span>
-                        <br><span class="err_txt err_mobile" id="err_mobile"></span>
-                    </p>
-
-                    <p class="wrap_p">
-                        <span class="req">*</span>
-                        <input type="text" class="codenb_cls" name="codenb_nm" id="codenb_id" placeholder="인증번호입력" onchange="pass_codenb()">
-                        <button type="button" class="getnb_cls" name="getnb_nm" id="getnb_id">인증번호 받기</button>
-                        <br><span class="err_txt err_codenb" id="err_coden"></span>
-                    </p>
-
-                    <p class="wrap_p">
-                        <span class="req">*</span>
-                        <input type="text" class="email_id" name="email_id" id="email_id" placeholder="이메일" onchange="pass_email1()">
-                        <span class="email_symbol">@</span>
-                        <input type="text" class="email_dns" name="email_dns" id="email_dns" placeholder="이메일 주소" onchange="pass_email2()">
-                        <select class="email_sel" name="email_sel" id="email_sel" onchange="change_email()">
-                            <option value="">-이메일 선택-</option>
-                            <option value="naver.com">naver.com</option>
-                            <option value="daum.net">daum.net</option>
-                            <option value="nate.com">nate.com</option>
-                            <option value="hotmail.com">hotmail.com</option>
-                            <option value="yahoo.com">yahoo.com</option>
-                            <option value="empas.com">empas.com</option>
-                            <option value="korea.com">korea.com</option>
-                            <option value="dreamwiz.com">dreamwiz.com</option>
-                            <option value="gmail.com">gmail.com</option>
-                            <option value="">직접입력</option>
-                        </select>
-                        <br><span class="err_txt" id="err_email"></span>
-                    </p>
-                </fieldset> 
-
-                    <fieldset class="add_info_wrap">
-                        <legend class="add_info">추가정보</legend>
-                        <div class="gender_wrap">
-                            <h4 class="gender_title">성별</h4>
-                                <label class="gender1"><input type="radio" name="gender" id="male_id" value="남" checked>남자</label>
-                                <label class="gender2"><input type="radio" name="gender" id="female_id" value="여">여자</label>
-                        </div>
-                        <div class="bd_wrap">
-                            <h4 class="bd_title">생년월일</h4>
-                                <input type="text" class="birth" name="birth" id= "birth" size="10">
-                                <br><span class="bd_txt">(ex. 20221009)</span><br>
-                                <span class="bd_radio">
-                                    <label class="calendar1"><input type="radio" name="calender" id="solar_id" value="양력" checked>양력</label>
-                                    <label class="calendar2"><input type="radio" name="calender" id="lunar_id" value="음력">음력</label>
-                                </span>
-                        </div>
-                        <div class="refund_info_wrap">
-                            <h4 class="refund_info_title">환불계좌 정보</h4>
-                                <ul>
-                                    <li class="refund_li1">
-                                        <span class="refund_stt">＊ 예금주</span>
-                                        <input type="text"class="accnm_cls" name="accnm_nm" id="accnm_id">
-                                    </li>
-                                    <li class="refund_li2">
-                                        <span class="refund_stt">＊ 은행명</span>
-                                        <select name="bank_sel" id="bank_sel" class="bank_sel">
-                                            <option value="" disabled>- 은행선택 -</option>
-                                            <option value="신한은행">신한은행</option>
-                                            <option value="우리은행">우리은행</option>
-                                            <option value="농협은행">농협은행</option>
-                                            <option value="하나은행">하나은행</option>
-                                            <option value="국민은행">국민은행</option>
-                                            <option value="">직접입력</option>
-                                        </select>
-                                    </li>
-                                    <li class="refund_li3">
-                                        <span class="refund_stt">＊ 계좌번호</span>
-                                        <input type="text" class ="accnb_cls" name="accnb_nm" id="accnb_id">
-                                        <br><span class="accnb_txt">("-"와 숫자만 입력)</span>
-                                    </li>
-                                </ul>
-                        </div>
-                    </fieldset>
-
-                    <fieldset class="agree_wrap">
-                        <legend class="hide">약관 동의</legend>
-                        <label class="all_agree_cls"><input type="checkbox" name="all_agree_nm" id="all_agree_id" value="" onclick="all_agree_Y()">전체 약관 동의</label>
-                        <div class="agree1">
-                            <pre>
+                <fieldset class="agree_wrap">
+                    <legend class="hide">약관 동의</legend>
+                    <label class="all_agree_cls"><input type="checkbox" name="all_agree_nm" id="all_agree_id" value="" onclick="all_agree_Y()">전체 약관 동의</label>
+                    <div class="agree1">
+                        <pre>
 제1조(목적)
 이 약관은 (주)티젠 농업회사법인이 운영하는 티젠몰(이하 “몰”이라 한다)에서 제공하는 인터넷 관련 서비스(이하 “서비스”라 한다)를 이용함에 있어 사이버 몰과 이용자의 권리.의무 및 책임사항을 규정함을 목적으로 합니다.
 ※「PC통신, 무선 등을 이용하는 전자상거래에 대해서도 그 성질에 반하지 않는 한 이 약관을 준용합니다.」
@@ -321,17 +320,17 @@ include "../inc/session.php";
 ② “몰”과 이용자 간에 제기된 전자상거래 소송에는 한국법을 적용합니다.
 
 부 칙(시행일) 이 약관은 2020년 01월 01일부터 시행합니다.
-                            </pre>
-                        </div>
-                        <p class="agree1_txt">
-                            <span class="req_agree">*</span>
-                            이용약관에 동의하십니까?
-                            <label class="agree1_ckb"><input type="checkbox" class="agree1_cls" name="agree1_nm" id="agree1_id" value="agree1_Y" onchange="pass_agree1()">동의함</label>
-                            <br><span class="err_txt err_agree1" id="err_agree1"></span>
-                        </p>
+                        </pre>
+                    </div>
+                    <p class="agree1_txt">
+                        <span class="req_agree">*</span>
+                        이용약관에 동의하십니까?
+                        <label class="agree1_ckb"><input type="checkbox" class="agree1_cls" name="agree1_nm" id="agree1_id" value="agree1_Y" onchange="pass_agree1()">동의함</label>
+                        <br><span class="err_txt err_agree1" id="err_agree1"></span>
+                    </p>
 
-                        <div class="agree2">
-                            <pre>
+                    <div class="agree2">
+                        <pre>
 1. 개인정보 수집목적 및 이용목적
 가. 서비스 제공에 관한 계약 이행 및 서비스 제공에 따른 요금정산
 콘텐츠 제공 , 구매 및 요금 결제 , 물품배송 또는 청구지 등 발송 , 금융거래 본인 인증 및 금융 서비스
@@ -356,37 +355,38 @@ o 로그 기록
 -보존이유: 통신비밀보호법
 -보존기간 : 3개월
 ※ 동의를 거부할 수 있으나 거부시 회원 가입이 불가능합니다.
-                            </pre>
-                        </div>
-                        <p class="agree2_txt">
-                            <span class="req_agree">*</span>
-                            개인정보 수집 및 이용에 동의하십니까?
-                            <label class="agree2_ckb"><input type="checkbox" class="agree2_cls" name="agree2_nm" id="agree2_id" value="agree2_Y" onchange="pass_agree2()">동의함</label>
-                            <br><span class="err_txt err_agree2" id="err_agree2"></span>
-                        </p>
+                        </pre>
+                    </div>
+                    <p class="agree2_txt">
+                        <span class="req_agree">*</span>
+                        개인정보 수집 및 이용에 동의하십니까?
+                        <label class="agree2_ckb"><input type="checkbox" class="agree2_cls" name="agree2_nm" id="agree2_id" value="agree2_Y" onchange="pass_agree2()">동의함</label>
+                        <br><span class="err_txt err_agree2" id="err_agree2"></span>
+                    </p>
 
-                        <div class="agree3">
-                            <pre>
+                    <div class="agree3">
+                        <pre>
 할인쿠폰 및 혜택, 이벤트, 신상품 소식 등 쇼핑몰에서 제공하는 유익한 쇼핑정보를 SMS나 이메일로 받아보실 수 있습니다.
 
 단, 주문/거래 정보 및 주요 정책과 관련된 내용은 수신동의 여부와 관계없이 발송됩니다.
 
 선택 약관에 동의하지 않으셔도 회원가입은 가능하며, 회원가입 후 회원정보수정 페이지에서 언제든지 수신여부를 변경하실 수 있습니다.
-                            </pre>
-                        </div>
-                        <p class="agree3_txt">SMS 수신을 동의하십니까?
-                            <label class="agree3_ckb"><input type="checkbox" class="agree3_cls" name="agree3_nm" id="agree3_id" value="Y">동의함</label>
-                        </p>
-                        <p class="agree4_txt">이메일 수신을 동의하십니까?
-                            <label class="agree4_ckb"><input type="checkbox" class="agree4_cls" name="agree4_nm" id="agree4_id" value="Y">동의함</label>
-                        </p>
-                    </fieldset>
+                        </pre>
+                    </div>
+                    <p class="agree3_txt">SMS 수신을 동의하십니까?
+                        <label class="agree3_ckb"><input type="checkbox" class="agree3_cls" name="agree3_nm" id="agree3_id" value="Y">동의함</label>
+                    </p>
+                    <p class="agree4_txt">이메일 수신을 동의하십니까?
+                        <label class="agree4_ckb"><input type="checkbox" class="agree4_cls" name="agree4_nm" id="agree4_id" value="Y">동의함</label>
+                    </p>
+                </fieldset>
 
-                    <p class="btn"><button type="submit" class="join_sbm_cls" name="join_sbm_nm" id="join_sbm_id">회원가입</button></p>
+                <p class="btn"><button type="submit" class="join_sbm_cls" name="join_sbm_nm" id="join_sbm_id">회원가입</button></p>
 
-            </form>
-        </section>
-    </main>
+        </form>
+
+    </section>
+</main>
 
 <?php include "../inc/footer.php"; ?>
 

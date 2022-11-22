@@ -4,7 +4,7 @@
 <header id="header" class="header">
 
     <div class="header_bottom">
-        <h1 class="logo"><a href="../admin.php">TEAZEN</a></h1>
+        <h1 class="logo"><a href="../../index.php">TEAZEN</a></h1>
         <h2 class="hide">주요 메뉴</h2>
         <nav class="gnb">
         <ul class="gnb_wrap">

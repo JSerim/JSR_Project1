@@ -8,6 +8,7 @@ $(document).ready(function(){
         $(this).parent().css({background:"#fcf9ed"});
     });
 
+
 /* Language */
     $(".top_m6").click(function(){
         $(".language").slideToggle();

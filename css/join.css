@@ -1,11 +1,4 @@
-/* -------------------------------------------- Main ---------------------------------------------- */
-.homepage{
-    background:url(../images/homepage.jpg) no-repeat;
-    display:block;
-    width:1600px;
-    height:226px;
-    text-indent:-9999px;
-}
+/* ---------------------------- Main IR ------------------------------ */
 .join_title{
     background:url(../images/join_title.gif) no-repeat;
     display:block;
@@ -15,10 +8,12 @@
 }
 
 /* ----------------------- Main 디자인 -------------------------- */
+button:hover{
+    font-weight:bold;
+}
 input{
     font-size:16px;
 }
-
 .content{
     width:1200px;
     height: 2300px;
@@ -197,15 +192,17 @@ input{
     height:40px;
     border:1px solid #949494;
     box-sizing:border-box;
-    padding-left:20px;
+    padding-left:10px;
 }
 .email_sel{
     width:182px;
     height:40px;
     border:1px solid #949494;
     box-sizing:border-box;
-    padding-left:20px;
-    margin-left:4.5px;
+    padding-left:10px;
+    margin-left:8px;
+    position:relative;
+    top:-1px;
 }
 .email_symbol{
     font-size:18px;

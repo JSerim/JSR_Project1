@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>아이디 검색</title>
+    <title>TEAZEN 아이디 검색</title>
     <style type="text/css">
         body,input,button{font-size:20px;}
     </style>

@@ -1,0 +1,112 @@
+/* ---------------------- login IR ------------------------ */
+.my_order{
+    background:url(../images/my_order.gif) no-repeat;
+    display:block;
+    width:435px;
+    height:126px;
+    text-indent:-9999px;
+}
+.my_consult{
+    background:url(../images/my_consult.gif) no-repeat;
+    display:block;
+    width:435px;
+    height:126px;
+    text-indent:-9999px;
+}
+.my_profile{
+    background:url(../images/my_profile.gif) no-repeat;
+    display:block;
+    width:435px;
+    height:126px;
+    text-indent:-9999px;
+}
+.my_coupon{
+    background:url(../images/my_coupon.gif) no-repeat;
+    display:block;
+    width:435px;
+    height:126px;
+    text-indent:-9999px;
+}
+.my_wishlist{
+    background:url(../images/my_wishlist.gif) no-repeat;
+    display:block;
+    width:435px;
+    height:126px;
+    text-indent:-9999px;
+}
+.my_board{
+    background:url(../images/my_board.gif) no-repeat;
+    display:block;
+    width:435px;
+    height:126px;
+    text-indent:-9999px;
+}
+.my_mileage{
+    background:url(../images/my_mileage.gif) no-repeat;
+    display:block;
+    width:435px;
+    height:126px;
+    text-indent:-9999px;
+}
+.my_address{
+    background:url(../images/my_address.gif) no-repeat;
+    display:block;
+    width:435px;
+    height:126px;
+    text-indent:-9999px;
+}
+
+/* ---------------------- login 디자인 ------------------------ */
+.content{
+    width:1200px;
+    height: 1000px;
+    margin:auto;
+    position:relative;
+    z-index:1;
+}
+.mypage_section{
+    width:940px;
+    position:relative;
+    top:115px;
+    left:200px;
+}
+
+/* 타이틀 */
+.title_box{
+    width:940px;
+    height:40px;
+    border-bottom:1px solid #949494;
+    margin-bottom:45px;
+}
+.green_box{
+    display:block;
+    width:15px;
+    height:30px;
+    background:#002a03;
+    margin-bottom:10px;
+    margin-right:10px;
+    float:left;
+}
+.mypage_title{
+    font-size:20px;
+    font-weight:bold;
+    float:left;
+}
+.gray_txt:after{
+    content:"|";
+    margin:0 15px;
+    color:#949494;
+    float:left;
+}
+.gray_txt{
+    color:#949494;
+    float:left;
+    padding-top:5px;
+    font-size:15px;
+}
+
+/* 이미지 배치 */
+.mypage_list li{
+    float:left;
+    margin:10px;
+}

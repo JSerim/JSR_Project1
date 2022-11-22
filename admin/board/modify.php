@@ -1,6 +1,6 @@
 <?php
 include "../inc/session.php";
-include "../inc/login_check.php";
+include "../inc/admin_check.php";
 // 데이터 가져오기
 $table_name= "board";
 $b_idx = $_GET["b_idx"];
@@ -22,7 +22,7 @@ mysqli_close($dbcon);
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Q&A 수정하기</title>
-    <link rel="stylesheet" type="text/css" href="../css/board_write.css">
+    <link rel="stylesheet" type="text/css" href="../../css/board_write.css">
     <script>
         function board_check(){
             var b_pwd = document.getElementById("b_pwd");
