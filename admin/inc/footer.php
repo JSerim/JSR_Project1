@@ -48,7 +48,7 @@
                             <dt>ORDER TRACKING</dt>
                                 <dd>롯데(구.현대)택배 (TEL:1588-2121)</dd>
                                 <dd>배송정보는 해당 택배사를 통해 조회가 가능합니다.</dd>
-                                <a href="#">배송위치 조회하기</a>
+                                <dd><a href="#">배송위치 조회하기</a></dd>
                         </dl>
                         <dl class="fmr_cont1_b">
                             <dt>RETURN & EXCHANGE</dt>

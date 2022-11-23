@@ -23,11 +23,10 @@ include "../inc/session.php";
 </head>
 <body>
 <?php include "../inc/header_sub.php"; ?>
-<?php/*  include "../inc/search.php";  */?>
 <?php include "../inc/speed_bar.php"; ?>
-<?php include "../inc/speed_menu.php"; ?>
 
-    <main id="content" class="content">
+<main id="content" class="content">
+        <?php include "../inc/speed_menu.php"; ?>
         <section class="join">
             <h2 class="join_title">회원가입</h2>
             <form name="join" action="insert.php" method="post" onsubmit="return form_check()">

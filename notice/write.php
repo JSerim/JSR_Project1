@@ -40,7 +40,6 @@ include "../inc/admin_check.php";
 <body>
 
 <?php include "../inc/header_sub.php"; ?>
-<?php/*  include "../inc/search.php";  */?>
 <?php include "../inc/speed_bar.php"; ?>
 
 <!-- 콘텐트 -->

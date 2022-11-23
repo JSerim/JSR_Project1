@@ -45,7 +45,6 @@ include "inc/session.php";
 
     <main id="content" class="content">
 
-    <?php/*  include "inc/search.php";  */?>
     <?php include "inc/speed_bar.php"; ?>
 
         <section class="main_image">                  

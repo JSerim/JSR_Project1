@@ -34,7 +34,6 @@ if($s_id != "admin"){
 <body>
     
 <?php include "inc/header_index.php"; ?>
-<?php/*  include "inc/search.php";  */?>
 <?php include "inc/speed_bar.php"; ?>
 
     <main id="content" class="content">

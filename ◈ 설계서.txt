@@ -135,8 +135,72 @@
     );
 
 ** 관리자 입력 **
-    insert into members value(1, '-', '관리자', 'admin', '1234', '', '', '',
-    '01011112222', 'admin@naver.com', '', '', '', '', '', '', '', '', '2022-11-01');
+    insert into members (user_type, u_name, u_id, pwd, mobile, email) value('개인', '관리자', 'admin', '1234', '01012341234', 'admin@naver.com');
+* 인서트 쿼리 *
+insert into members (user_type, u_name, u_id, pwd, ps_code, addr_b, addr_d, mobile, email, gender, birth, calender, reg_date) 
+value ('개인', '홍길동', 'hong', '1111', '12345', '서울시 강남구', '그린컴퓨터', '01012123434', 'hong@naver.com', '남', '2022-11-23', '양력', '2022-11-23');
+insert into members (user_type, u_name, u_id, pwd, ps_code, addr_b, addr_d, mobile, email, gender, birth, calender, reg_date) 
+value ('개인', '김철수', 'kim123', '2222', '23456', '경기도 시흥시', '레드컴퓨터', '01033334545', 'kim123@naver.com', '남', '2020-11-23', '양력', '2022-11-23');
+insert into members (user_type, u_name, u_id, pwd, ps_code, addr_b, addr_d, mobile, email, gender, birth, calender, reg_date) 
+value ('개인', '이영희', 'young', '3333', '34567', '경기도 고양시', '블루컴퓨터', '01056567777', 'young@naver.com', '여', '1997-11-03', '양력', '2022-11-23');
+insert into members (user_type, u_name, u_id, pwd, ps_code, addr_b, addr_d, mobile, email, gender, birth, calender, reg_date) 
+value ('사업자', '이유리', 'glass', '4444', '45678', '경기도 안양시', '화이트컴퓨터', '01077773535', 'glass@naver.com', '여', '1995-10-26', '음력', '2022-11-23');
+insert into members (user_type, u_name, u_id, pwd, ps_code, addr_b, addr_d, mobile, email, gender, birth, calender, reg_date) 
+value ('외국인', '스테파니', 'pany', '5555', '56789', '경기도 평택시', '오렌지컴퓨터', '01088889090', 'pany@naver.com', '여', '2002-08-18', '양력', '2022-11-23');
+
+
+** 테이블 생성 **
+create table notice(
+idx int auto_increment primary key,
+n_title varchar(255) not null,
+n_content text not null,
+writer varchar(20) not null,
+w_date datetime not null,
+f_name varchar(50),
+f_type varchar(50),
+f_size varchar(50)
+);
+
+* 인서트쿼리 *
+insert into notice (n_title, n_content, writer, w_date) 
+value('강의실 이동안내', '강남그린컴퓨터의 KDT강의실이 본관에서 별관으로 이동될 예정입니다.', '관리자', '2022-11-23');
+insert into notice (n_title, n_content, writer, w_date) 
+value('프로젝트 발표안내', '금주 금요일에 1차 프로젝트 발표가 있을 예정입니다. 발표시간은 5분입니다.', '관리자', '2022-11-23');
+insert into notice (n_title, n_content, writer, w_date) 
+value('점심시간 안내', '강남그린컴퓨터 아트학원 KDT과정의 점심시간은 1시 20분부터 2시 30분까지입니다.', '관리자', '2022-11-23');
+insert into notice (n_title, n_content, writer, w_date) 
+value('발표자료 안내', '프로젝트 발표시 발표자료 PPT가 필요합니다.', '관리자', '2022-11-23');
+insert into notice (n_title, n_content, writer, w_date) 
+value('평가방식 변경 안내', '기존 필기, 실기로 이루어졌던 평가방식이 프로젝트 작품 평가로 변경될 예정입니다.', '관리자', '2022-11-23');
+
+
+** 테이블 생성 **
+create table board(
+idx int auto_increment primary key,
+b_name varchar(20) not null,
+b_pwd varchar(20) not null,
+b_title varchar(255) not null,
+b_content text not null,
+w_date datetime not null,
+cate varchar(15),
+f_name varchar(50),
+f_type varchar(50),
+f_size varchar(50),
+cnt int default 0
+);
+
+* 인서트 쿼리 *
+insert into board (b_name, b_pwd, b_title, b_content, w_date, cate, cnt) 
+value('홍길동', '1111', '상품수량 문의', '한번에 몇박스까지 주문가능할까요?', '2022-11-23', '콤부차', '0');
+insert into board (b_name, b_pwd, b_title, b_content, w_date, cate, cnt) 
+value('김철수', '2222', '당도문의', '자몽쏙 당도함유량 문의드립니다.', '2022-11-23', 'TEA분말/음료믹스', '0');
+insert into board (b_name, b_pwd, b_title, b_content, w_date, cate, cnt) 
+value('이영희', '3333', '배송문의', '주문하면 배송까지 보통 얼마나 걸리나요?', '2022-11-23', '', '0');
+insert into board (b_name, b_pwd, b_title, b_content, w_date, cate, cnt) 
+value('이유리', '4444', '카페인함량', '기능성 TEA중에 카페인이 들어가있는 제품이 있을까요?', '2022-11-23', '기능성 TEA 스틱형', '0');
+insert into board (b_name, b_pwd, b_title, b_content, w_date, cate, cnt) 
+value('스테파니', '5555', '오프라인구매', '오프라인으로 구매하려고 하는데 어디서 구매 가능할까요?', '2022-11-23', '', '0');
+
 
 ==================================================
 ** PHP **
@@ -147,19 +211,5 @@
 5. DB 접속 종료
 6. 리디렉션
 
--------------------------------------------------------------
-게시판
-board table
 
-create table board(
-    idx int auto_increment primary key,
-    writer varchar(20) not null,
-    b_pwd varchar(20) not null,
-    b_title varchar(255) not null,
-    b_content text not null,
-    w_date date,
-    cate varchar(15),
-    f_name varchar(50),
-    f_type varchar(50),
-    f_size varchar(50)
-);
+
