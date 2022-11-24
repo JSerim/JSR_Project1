@@ -10,7 +10,7 @@ button{
     border:none;
 }
 body{
-    font-family:"한컴 고딕","맑은 고딕","나눔 고딕","돋움", Arial, Helvetica, sans-serif;
+    font-family:"한컴 고딕","맑은 고딕", "돋움", Arial, Helvetica, sans-serif;
     font-size:14px;
 }
 ul,ol,li,dl,dt,dd{
