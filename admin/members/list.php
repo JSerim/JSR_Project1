@@ -99,7 +99,7 @@ if($e_pageNum > $total_page){
             $start = ($page -1) * $list_num;
             // 10) paging : 시작번호부터 페이지 당 보여질 목록수 만큼 데이터 구하는 쿼리 작성
             // (limit 몇번부터, 몇개 / 순서쓰는 것은 0부터 시작되고 개수 쓰는 것은 1부터 시작됨)
-            $sql = "select * from members limit $start, $list_num;";
+            $sql = "select * from $table_name limit $start, $list_num;";
             $result = mysqli_query($dbcon, $sql);
             // 5-1. DB에서 데이터 가져오기 문장을 변수까지 통으로 안에 넣기
             $i = $start + 1;

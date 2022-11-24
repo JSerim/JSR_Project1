@@ -70,12 +70,12 @@ function form_check(){
     };
 
     if(!pwdck.value){
-        var txt = document.getElementById("err_pwddck");
+        var txt = document.getElementById("err_pwdck");
         txt.innerHTML = "비밀번호 확인을 입력하세요.";
         pwdck.focus();
         return false;
     };
-    if(pwdck.value !=pwd.value ){
+    if(pwdck.value != pwd.value){
         var txt = document.getElementById("err_pwddck");
         txt.textContent = "비밀번호가 일치하지 않습니다.";
         pwdck.focus();

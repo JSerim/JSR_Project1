@@ -1,5 +1,6 @@
 <?php
 include "../inc/session.php";
+$table_name = "members";
 /* --------------- 1. 데이터가져오기 --------------- */
 $u_type = $_POST["user_type"];
 $pwd = $_POST["pwd"];
@@ -41,7 +42,7 @@ include "../inc/dbcon.php";
 
 /* ---------------- 3. 데이터 저장 : 쿼리 작성 ----------------- */
 // 비밀번호 변경시
-$sql_yPwd = "update members set ";
+$sql_yPwd = "update $table_name set ";
 $sql_yPwd .= "user_type='$u_type', ";
 $sql_yPwd .= "pwd='$pwd', ";
 $sql_yPwd .= "ps_code='$ps_code', ";

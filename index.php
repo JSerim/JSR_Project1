@@ -114,7 +114,7 @@ include "inc/session.php";
                             <li class="cont1_item1">
                                 <ul>
                                     <div class="black_background">
-                                        <li class="item1_name"><a href="#">[티젠몰 단독] <br>티젠 콤부차 상콤달콤 패키지 <br>(2종 택1)</a>
+                                        <li class="item1_name"><a href="products/product_details.php">[티젠몰 단독] <br>티젠 콤부차 상콤달콤 패키지 <br>(2종 택1)</a>
                                             <ul class="price">
                                                 <li class="item1_price_regular">42,000원</li>
                                                 <li class="item1_price_discount">할인가 : 29,900원</li>
@@ -131,7 +131,7 @@ include "inc/session.php";
                             <li class="cont1_item2">
                                 <ul>
                                     <div class="black_background">
-                                        <li class="item2_name"><a href="#">티젠 콤부차 골프 선물세트 <br>× 10세트 (1카톤)</a>
+                                        <li class="item2_name"><a href="products/product_details.php">티젠 콤부차 골프 선물세트 <br>× 10세트 (1카톤)</a>
                                             <ul class="price">
                                                 <li class="item2_price_regular">450,000원</li>
                                                 <li class="item2_price_discount">할인가 : 405,000원</li>
@@ -148,7 +148,7 @@ include "inc/session.php";
                             <li class="cont1_item3">
                                 <ul>
                                     <div class="black_background">
-                                        <li class="item3_name"><a href="#">티젠 콤부차 골프 선물세트 <br>(티젠 콤부차+볼빅 골프공)</a>
+                                        <li class="item3_name"><a href="products/product_details.php">티젠 콤부차 골프 선물세트 <br>(티젠 콤부차+볼빅 골프공)</a>
                                             <ul class="price">
                                                 <li class="item3_price_regular">45,000원</li>
                                                 <li class="item3_price_discount">할인가 : 42,900원</li>
@@ -165,7 +165,7 @@ include "inc/session.php";
                             <li class="cont1_item4">
                                 <ul>
                                     <div class="black_background">
-                                        <li class="item4_name"><a href="#">티젠 프리미엄 바닐라 파우더 <br>(1kg)</a>
+                                        <li class="item4_name"><a href="products/product_details.php">티젠 프리미엄 바닐라 파우더 <br>(1kg)</a>
                                             <ul class="price">
                                                 <li class="item4_price_regular">18,000원</li>
                                                 <li class="item4_price_discount">할인가 : 16,200원</li>
@@ -183,7 +183,7 @@ include "inc/session.php";
                         <li class="cont1_item5">
                             <ul>
                                 <div class="black_background">
-                                    <li class="item5_name"><a href="#">티젠 콤부차 30스틱입 × 5박스) <br>(5가지맛 혼합 구성)</a>
+                                    <li class="item5_name"><a href="products/product_details.php">티젠 콤부차 30스틱입 × 5박스) <br>(5가지맛 혼합 구성)</a>
                                         <ul class="price">
                                             <li class="item5_price_regular">105,000원</li>
                                             <li class="item5_price_discount">할인가 : 68,300원</li>
@@ -200,7 +200,7 @@ include "inc/session.php";
                         <li class="cont1_item6">
                             <ul>
                                 <div class="black_background">
-                                    <li class="item6_name"><a href="#">티젠 자몽쏙 30스틱입 <br>2박스 + 보틀</a>
+                                    <li class="item6_name"><a href="products/product_details.php">티젠 자몽쏙 30스틱입 <br>2박스 + 보틀</a>
                                         <ul class="price">
                                             <li class="item6_price_regular">44,000원</li>
                                             <li class="item6_price_discount">할인가 : 29,900원</li>
@@ -217,7 +217,7 @@ include "inc/session.php";
                         <li class="cont1_item7">
                             <ul>
                                 <div class="black_background">
-                                    <li class="item7_name"><a href="#">티젠 콤부차 파인애플 <br>30스틱입 × 2박스 <br>(보틀포함)</a>
+                                    <li class="item7_name"><a href="products/product_details.php">티젠 콤부차 파인애플 <br>30스틱입 × 2박스 <br>(보틀포함)</a>
                                         <ul class="price">
                                             <li class="item7_price_regular">44,000원</li>
                                             <li class="item7_price_discount">할인가 : 30,900원</li>
@@ -234,7 +234,7 @@ include "inc/session.php";
                         <li class="cont1_item8">
                             <ul>
                                 <div class="black_background">
-                                    <li class="item8_name"><a href="#">티젠 프리미엄 호지차 파우더 <br>(500g)</a>
+                                    <li class="item8_name"><a href="products/product_details.php">티젠 프리미엄 호지차 파우더 <br>(500g)</a>
                                         <ul class="price">
                                             <li class="item8_price_regular">11,000원</li>
                                             <li class="item8_price_discount">할인가 : 9,900원</li>
@@ -439,7 +439,7 @@ include "inc/session.php";
                     </div>
                 </div>
                 <span class="event_right_top">
-                    <video src="#">티젠 콤부차 상콤달콤 웰빙티 영상보기</video>
+                    <iframe class="vedio" width="548" height="309" src="https://www.youtube.com/embed/TAtf7Yv0H4s" title="[티젠 콤부차 x 김태리] 상콤달콤 웰빙티, 이젠 티젠 콤부차로 갈아타자! I TVC 15’s" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </span>
                 <div class="event_right_bottom">
                     <span class="event_3_poster">
@@ -463,7 +463,7 @@ include "inc/session.php";
     <div class="w_main container-fluid" data-rate="0.5" data-effect="slide-up">
     <div class="bw row p-5" >
         <div class="homepage_div">
-            <h2 class="homepage"><a href="#">About TEAZEN 티젠 회사소개 홈페이지 바로가기</a></h2>
+            <h2 class="homepage"><a href="http://www.teazen.co.kr/">About TEAZEN 티젠 회사소개 홈페이지 바로가기</a></h2>
             <img src="images/homepage_background.jpg" alt="" class="homepage_background">
         </div>
     </div>

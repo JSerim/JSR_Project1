@@ -1,4 +1,5 @@
 <?php
+$table_name = "members";
 /* --------------- 1. 데이터가져오기 --------------- */
 $u_type = $_POST["user_type"];
 $u_name = $_POST["u_name"];
@@ -46,7 +47,7 @@ exit; */
 include "../inc/dbcon.php";
 
 /* ---------------- 3. 데이터 저장 : 쿼리 작성 ----------------- */
-$sql = "insert into members";
+$sql = "insert into $table_name";
 $sql .= "(user_type, u_name, u_id, pwd, ps_code, addr_b, addr_d, mobile, email, gender, birth, calender, account_nm, bank, account_nb, sms_apply, email_apply, reg_date)";
 $sql .= "values";
 $sql .= "('$u_type', '$u_name', '$u_id', '$pwd', '$ps_code', '$addr_b', '$addr_d', '$mobile', '$email', '$gender', '$birth', '$calender', '$accounter', '$bank', '$account', '$sms_apply', '$email_apply', '$reg_date');";

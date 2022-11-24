@@ -2,7 +2,8 @@
 include "../inc/session.php";
 include "../inc/login_check.php";
 include "../inc/dbcon.php";
-$sql = "select * from members where idx=$s_idx;";
+$table_name = "members";
+$sql = "select * from $table_name where idx=$s_idx;";
 $result = mysqli_query($dbcon, $sql);
 $array = mysqli_fetch_array($result);
 ?>

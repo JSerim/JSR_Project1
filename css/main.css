@@ -318,19 +318,17 @@
     width:576px;
     height:336px;
 }
-video{
-    background:url(../images/video_img.jpg) no-repeat;
-    display:block;
-    width:548px;
-    height:309px;
-    text-indent:-9999px;
-}
 .event_right_bottom{
     background:url(../images/cont_bottom_right_bottom_wbg.png) no-repeat;
     display:block;
     width:576px;
     height:267px;
     text-indent:-9999px;
+}
+iframe{
+    position:relative;
+    top:5px;
+    left:10px;
 }
 .event_3{
     background:url(../images/event_3.jpg) no-repeat;

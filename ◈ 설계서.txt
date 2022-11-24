@@ -149,6 +149,19 @@ insert into members (user_type, u_name, u_id, pwd, ps_code, addr_b, addr_d, mobi
 value ('외국인', '스테파니', 'pany', '5555', '56789', '경기도 평택시', '오렌지컴퓨터', '01088889090', 'pany@naver.com', '여', '2002-08-18', '양력', '2022-11-23');
 
 
+    Table 명 : notice
+    ( 항목 | 필드명 | 데이터타입(길이) | 제약 )
+    --------------------------------------------------------------------------------------------------
+    인덱스 | idx | int | auto_increment, primary key
+    제목 | n_title | varchar(255) | not null
+    내용 | n_content | text | not null
+    작성자 | writer | varchar(20) | not null
+    작성일 | w_date | datetime | not null
+    파일이름 | f_name | varchar(50) | -
+    파일타입 | f_type | varchar(50) | -
+    파일사이즈 | f_size | varchar(50) | -
+    --------------------------------------------------------------------------------------------------
+
 ** 테이블 생성 **
 create table notice(
 idx int auto_increment primary key,
@@ -173,6 +186,23 @@ value('발표자료 안내', '프로젝트 발표시 발표자료 PPT가 필요�
 insert into notice (n_title, n_content, writer, w_date) 
 value('평가방식 변경 안내', '기존 필기, 실기로 이루어졌던 평가방식이 프로젝트 작품 평가로 변경될 예정입니다.', '관리자', '2022-11-23');
 
+
+
+    Table 명 : board
+    ( 항목 | 필드명 | 데이터타입(길이) | 제약 )
+    --------------------------------------------------------------------------------------------------
+    인덱스 | idx | int | auto_increment, primary key
+    이름 | b_name | varchar(20) | not null
+    비밀번호 | b_pwd | varchar(20) | not null
+    제목 | b_title | varchar(255) | not null
+    내용 | b_content | text | not null
+    작성일 | w_date | datetime | not null
+    카테고리 | cate | varchar(15) | -
+    파일이름 | f_name | varchar(50) | -
+    파일타입 | f_type | varchar(50) | -
+    파일사이즈 | f_size | varchar(50) | -
+    조회수 | cnt | int | default 0
+    --------------------------------------------------------------------------------------------------
 
 ** 테이블 생성 **
 create table board(

@@ -1,3 +1,6 @@
+<?php
+include "../inc/session.php";
+?>
 <!DOCTYPE html>
 <html lang="ko">
 <head>
@@ -7,41 +10,30 @@
     <title>TEAZEN 상품상세</title>
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
     <!-- CSS -->
-    <link rel="stylesheet" type="text/css" href="css/product_details.css">
-    <link rel="stylesheet" type="text/css" href="css/header.css">
-    <link rel="stylesheet" type="text/css" href="css/footer.css">
-    <link rel="stylesheet" type="text/css" href="css/search.css">
-    <link rel="stylesheet" type="text/css" href="css/speed_bar.css">
-    <link rel="stylesheet" type="text/css" href="css/speed_menu.css">
+    <link rel="stylesheet" type="text/css" href="../css/product_details.css">
     <!-- JS -->
-    <script type="text/javascript" src="js/product_details_form.js"></script>
-    <script type="text/javascript" src="js/product_details.js"></script>
-    <script type="text/javascript" src="js/header.js"></script>
-    <script type="text/javascript" src="js/search.js"></script>
-    <script type="text/javascript" src="js/speed_bar.js"></script>
-    <script type="text/javascript" src="js/speed_menu.js"></script>
-
+    <script type="text/javascript" src="../js/product_details_form.js"></script>
+    <script type="text/javascript" src="../js/product_details.js"></script>
 
 </head>
 <body>
-<?php include "inc/header.php"; ?>
-<?php/*  include "inc/search.php";  */?>
-<?php include "inc/speed_bar.php"; ?>
-<?php include "inc/speed_menu.php"; ?>
+<?php include "../inc/header_sub.php"; ?>
+<?php include "../inc/speed_bar.php"; ?>
 
-    <main id="content" class="content">
+<main id="content" class="content">
+        <?php include "../inc/speed_menu.php"; ?>
         <section class="product_details_section">
             <h2 class="hide">상품상세 페이지</h2>
 
             <div class="product_img">
                 <h3 class="hide">상품 이미지</h3>
                 <p class="big_img">
-                    <img src="images/thumb_img1.jpg" alt="상콤달콤패키지포스터" id="big_img" >
+                    <img src="../images/thumb_img1.jpg" alt="상콤달콤패키지포스터" id="big_img" >
                 </p>
                 <p class="thumb_img">
-                    <img src="images/thumb_img1.jpg" alt="상콤달콤패키지포스터" onclick="changeImage(this.src)">
-                    <img src="images/thumb_img2.jpg" alt="콤부차피치" onclick="changeImage(this.src)">
-                    <img src="images/thumb_img3.jpg" alt="콤부차파인애플" onclick="changeImage(this.src)">
+                    <img src="../images/thumb_img1.jpg" alt="상콤달콤패키지포스터" onclick="changeImage(this.src)">
+                    <img src="../images/thumb_img2.jpg" alt="콤부차피치" onclick="changeImage(this.src)">
+                    <img src="../images/thumb_img3.jpg" alt="콤부차파인애플" onclick="changeImage(this.src)">
                 </p>
             </div>
 
@@ -384,7 +376,7 @@
         </section>
 
     </main> 
-<?php include "inc/footer.php"; ?>
+<?php include "../inc/footer.php"; ?>
 
 </body>
 </html>

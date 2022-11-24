@@ -183,11 +183,11 @@
 
         <h2 class="hide">SNS</h2>
         <ul class="sns_wrap">
-            <li class="sns1"><a href="#">유튜브</a></li>
-            <li class="sns2"><a href="#">인스타그램</a></li>
-            <li class="sns3"><a href="#">페이스북</a></li>
-            <li class="sns4"><a href="#">네이버</a></li>
-            <li class="sns5"><a href="#">카카오톡</a></li>
+            <li class="sns1"><a href="https://www.youtube.com/channel/UCtLQoziaflVeOgx2SDE0HeA/videos">유튜브</a></li>
+            <li class="sns2"><a href="https://www.instagram.com/teazenofficial/">인스타그램</a></li>
+            <li class="sns3"><a href="https://www.facebook.com/TEAZEN/">페이스북</a></li>
+            <li class="sns4"><a href="https://blog.naver.com/teazen_mkt">네이버</a></li>
+            <li class="sns5"><a href="https://pf.kakao.com/_cqxkMxl">카카오톡</a></li>
         </ul>
     </div>
 </header>
