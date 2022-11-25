@@ -439,7 +439,7 @@ include "inc/session.php";
                     </div>
                 </div>
                 <span class="event_right_top">
-                    <iframe class="vedio" width="548" height="309" src="https://www.youtube.com/embed/TAtf7Yv0H4s" title="[티젠 콤부차 x 김태리] 상콤달콤 웰빙티, 이젠 티젠 콤부차로 갈아타자! I TVC 15’s" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <iframe style="margin-left:13px; margin-top:13px" width="548" height="309" src="https://www.youtube.com/embed/TAtf7Yv0H4s" title="[티젠 콤부차 x 김태리] 상콤달콤 웰빙티, 이젠 티젠 콤부차로 갈아타자! I TVC 15’s" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </span>
                 <div class="event_right_bottom">
                     <span class="event_3_poster">

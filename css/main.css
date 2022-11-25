@@ -325,11 +325,6 @@
     height:267px;
     text-indent:-9999px;
 }
-iframe{
-    position:relative;
-    top:5px;
-    left:10px;
-}
 .event_3{
     background:url(../images/event_3.jpg) no-repeat;
     display:block;
@@ -799,9 +794,6 @@ iframe{
     float:right;
     margin-top:48px;
     margin-right:287px;
-}
-.event_right_top video{
-    margin:14px 15px 13px 14px;
 }
 .event_right_bottom{
     float:right;

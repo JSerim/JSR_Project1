@@ -134,7 +134,7 @@ include "../inc/session.php";
                                 <li class="refund_li2">
                                     <span class="refund_stt">＊ 은행명</span>
                                     <select name="bank_sel" id="bank_sel" class="bank_sel">
-                                        <option value="" disabled>- 은행선택 -</option>
+                                        <option value="">- 은행선택 -</option>
                                         <option value="신한은행">신한은행</option>
                                         <option value="우리은행">우리은행</option>
                                         <option value="농협은행">농협은행</option>
