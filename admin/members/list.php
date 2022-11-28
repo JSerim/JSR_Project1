@@ -68,7 +68,7 @@ if($e_pageNum > $total_page){
     </script>
 </head>
 <body>
-<?php include "../inc/header_sub.php"; ?>
+<?php include "../inc/admin_header_sub.php"; ?>
 <?php include "../inc/speed_bar.php"; ?>
 <?php include "../inc/speed_menu.php"; ?>
 <main id="content" class="content">

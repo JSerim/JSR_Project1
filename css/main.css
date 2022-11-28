@@ -371,27 +371,15 @@
 
 /* ---------------------- Main_page 디자인 ---------------------- */
 .content{
+    width:1600px;
     height: 2472px;
     margin:auto;
     position:relative;
     z-index:1;
 }
 .main_image{
-    width:1600px;
+    width:100%;
     height:479px;
-    margin:auto;
-    border-top:1px solid #0000;
-    box-sizing:border-box;
-}
-.main_stop{
-    position:relative;
-    left:855px;
-    top:-62px;
-}
-.main_play{
-    position:relative;
-    left:855px;
-    top:-88px;
 }
 /* ---------------------------cont------------------------------ */
 .price{

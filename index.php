@@ -36,7 +36,7 @@ include "inc/session.php";
 			function custom_show(obj, mode) {
 				obj.find(".bw").addClass('animation animation_'+mode);
 			}
-		})
+		});
 	</script>
 </head>
 <body class="p-0">

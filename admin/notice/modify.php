@@ -56,7 +56,7 @@ mysqli_close($dbcon);
 </head>
 <body>
 
-<?php include "../inc/header_sub.php"; ?>
+<?php include "../inc/admin_header_sub.php"; ?>
 <?php include "../inc/speed_bar.php"; ?>
 
 <!-- 콘텐트 -->

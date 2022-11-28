@@ -90,7 +90,7 @@ $array = mysqli_fetch_array($result);
 </script>
 </head>
 <body>
-<?php include "../inc/header_sub.php"; ?>
+<?php include "../inc/admin_header_sub.php"; ?>
 <?php include "../inc/speed_bar.php"; ?>
 <?php include "../inc/speed_menu.php"; ?>
 

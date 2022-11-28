@@ -74,7 +74,7 @@ td{
 }
 .textarea{
     outline:none;
-    border:1px solid #999;
+    border:0 none;
     font-size:18px;
     width:920px;
     height:400px;
