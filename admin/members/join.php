@@ -48,7 +48,7 @@ include "../inc/session.php";
                         </p>
                         <p class="wrap_p">
                             <span class="req">*</span>
-                            <input type="text" class="u_id" name="u_id" id="u_id" placeholder="아이디" onchange="pass_id()">
+                            <input type="text" class="u_id" name="u_id" id="u_id" placeholder="아이디" onchange="pass_id()" readonly>
                             <button type="button" class="search_id" name="search_id" id="search_id" onclick="id_search()">아이디 중복 확인</button>
                             <br><span class="uid_txt">(아이디는 4~12글자만 입력할 수 있습니다.)</span>
                             <br><span class="err_txt err_id" id="err_id"></span>
