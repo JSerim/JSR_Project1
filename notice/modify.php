@@ -70,7 +70,7 @@ mysqli_close($dbcon);
             <p class="gray_txt">티젠의 다양한 쇼핑정보와 회사소식을 알려드립니다.</p>
         </div>
     
-        <form name="modify_form" action="edit.php?n_idx=<?php echo $n_idx; ?>" method="post" enctype="multipart/form-data" onsubmit="return notice_check()">
+        <form class="modify_form"  name="modify_form" action="edit.php?n_idx=<?php echo $n_idx; ?>" method="post" enctype="multipart/form-data" onsubmit="return notice_check()">
             <fieldset class="notice">
                 <legend class="hide">공지사항</legend>
 

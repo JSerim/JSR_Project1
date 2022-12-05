@@ -42,6 +42,7 @@
     height:40px;
     border-bottom:1px solid #949494;
     margin-bottom:45px;
+    position:absolute;
 }
 .green_box{
     display:block;
@@ -69,6 +70,12 @@
     padding-top:5px;
     font-size:15px;
 }
+
+.qa_content{
+    position:relative;
+    top:60px;
+}
+
 /* 상품분류 */
 .cate_wrap{
     margin-bottom:15px;

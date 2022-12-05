@@ -35,6 +35,9 @@ $array = mysqli_fetch_array($result);
             top:-40px;
             left:80px;
         }
+        .wrap2 .u_id{
+            width:590px;
+        }
         .join_form_wrap{
             position:relative;
             top:-15px;

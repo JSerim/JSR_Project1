@@ -55,7 +55,7 @@ include "../inc/login_check.php";
 </head>
 <body>
     
-<?php include "../inc/admin_header_sub.php"; ?>
+<?php include "../inc/header_sub.php"; ?>
 <?php include "../inc/speed_bar.php"; ?>
 
 <main id="content" class="content">
@@ -68,7 +68,7 @@ include "../inc/login_check.php";
                 <p class="gray_txt">상품에 대한 문의를 남겨주세요.</p>
             </div>
 
-    <form name="qa_form" action="insert.php" method="post" enctype="multipart/form-data" onsubmit="return board_check()">
+    <form class="qa_form" name="qa_form" action="insert.php" method="post" enctype="multipart/form-data" onsubmit="return board_check()">
         <fieldset class="qa">
             <legend class="hide">Q&A 글쓰기</legend>
             

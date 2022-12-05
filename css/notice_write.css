@@ -22,6 +22,11 @@ button:hover{
     height:40px;
     border-bottom:1px solid #949494;
     margin-bottom:45px;
+    position:absolute;
+}
+.notice_form, .modify_form{
+    position:relative;
+    top:60px;
 }
 .green_box{
     display:block;

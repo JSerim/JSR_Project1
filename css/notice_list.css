@@ -19,6 +19,11 @@
     height:40px;
     border-bottom:1px solid #949494;
     margin-bottom:45px;
+    position:absolute;
+}
+.list_content{
+    position:relative;
+    top:60px;
 }
 .green_box{
     display:block;
@@ -50,6 +55,7 @@
 /* 검색어 */
 .search_wrap{
     margin-bottom:40px;
+    clear:both;
 }
 select{
     border:1px solid #6d6d6d;

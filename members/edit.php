@@ -62,7 +62,7 @@ $sql_yPwd .= "where idx=$s_idx; ";
 // echo $sql_yPwd;
 
 // 비밀번호 미변경시
-$sql_nPwd = "update members set ";
+$sql_nPwd = "update $table_name set ";
 $sql_nPwd .= "user_type='$u_type', ";
 $sql_nPwd .= "ps_code='$ps_code', ";
 $sql_nPwd .= "addr_b='$addr_b', ";

@@ -46,65 +46,69 @@ $array = mysqli_fetch_array($result);
             <p class="gray_txt">티젠의 다양한 쇼핑정보와 회사소식을 알려드립니다.</p>
         </div>
             
-        <table class="view_table">
-            <tr>
-                <th class="v_title">제목</th>
-                <td class="v_content"><?php echo $array["n_title"]; ?></td>
-            </tr>
-            <tr>
-                <th class="v_title">작성자</th>
-                <td class="v_content"><?php echo $array["writer"]; ?></td>
-            </tr>
-            <tr>
-                <th class="v_title">작성일</th>
-                <?php $w_date = substr($array["w_date"], 0, 10);?>
-                <td class="v_content"><?php echo $w_date; ?></td>
-            </tr>
-            <tr>
-                <td colspan="2" class="v_text">
-                    <?php
-                    if($array["f_name"] && substr($array["f_type"], 0, 5) == "image"){
-                        $f_name = $array["f_name"];
-                        echo "
-                            <p>
-                                <img src=\"../../data/$f_name\" alt=\"\">
-                            </p>
-                        ";
-                    };
-                    ?>
-                    <textarea class="textarea"><?php 
-                    $n_content = str_replace("\n", "\n", $array["n_content"]);
-                    $n_content = str_replace(" ", "&nbsp;", $n_content);
-                    echo $n_content;
-                    ?></textarea>
-                </td>
-            </tr>
-            <tr>
-                <th class="v_title">첨부파일</th>
-                <td class="v_content">
-                    <a href="../../data/<?php echo $array["f_name"]; ?>" download="<?php echo $array["f_name"]; ?>">
-                    <?php echo $array["f_name"]; ?>
-                    </a>
-                </td>
-            </tr>
-        </table>
+        <div class="view_content">
 
-        <p class="list">
-            <a href="list.php" class="back_list">목록</a>
-            <?php if($s_id == "admin"){ ?>
-                <a href="modify.php?n_idx=<?php echo $n_idx; ?>" class="admin_func">수정</a>
-                <a href="#" onclick="remove_notice()" class="admin_func">삭제</a>
-            <?php }; ?>
-        </p>
+            <table class="view_table">
+                <tr>
+                    <th class="v_title">제목</th>
+                    <td class="v_content"><?php echo $array["n_title"]; ?></td>
+                </tr>
+                <tr>
+                    <th class="v_title">작성자</th>
+                    <td class="v_content"><?php echo $array["writer"]; ?></td>
+                </tr>
+                <tr>
+                    <th class="v_title">작성일</th>
+                    <?php $w_date = substr($array["w_date"], 0, 10);?>
+                    <td class="v_content"><?php echo $w_date; ?></td>
+                </tr>
+                <tr>
+                    <td colspan="2" class="v_text">
+                        <?php
+                        if($array["f_name"] && substr($array["f_type"], 0, 5) == "image"){
+                            $f_name = $array["f_name"];
+                            echo "
+                                <p>
+                                    <img src=\"../../data/$f_name\" alt=\"\">
+                                </p>
+                            ";
+                        };
+                        ?>
+                        <textarea class="textarea"><?php 
+                        $n_content = str_replace("\n", "\n", $array["n_content"]);
+                        $n_content = str_replace(" ", "&nbsp;", $n_content);
+                        echo $n_content;
+                        ?></textarea>
+                    </td>
+                </tr>
+                <tr>
+                    <th class="v_title">첨부파일</th>
+                    <td class="v_content">
+                        <a href="../../data/<?php echo $array["f_name"]; ?>" download="<?php echo $array["f_name"]; ?>">
+                        <?php echo $array["f_name"]; ?>
+                        </a>
+                    </td>
+                </tr>
+            </table>
 
-        <p class="before_list">
-            <span class="before_list_txt">∧ 이전글</span>
-            <span class="before_list_preview"></span>
-        </p>
-        <p class="next_list">
-            <span class="next_list_txt">∨ 다음글</span>
-            <span class="next_list_preview"></span>
-        </p>
+            <p class="list">
+                <a href="list.php" class="back_list">목록</a>
+                <?php if($s_id == "admin"){ ?>
+                    <a href="modify.php?n_idx=<?php echo $n_idx; ?>" class="admin_func">수정</a>
+                    <a href="#" onclick="remove_notice()" class="admin_func">삭제</a>
+                <?php }; ?>
+            </p>
+
+            <p class="before_list">
+                <span class="before_list_txt">∧ 이전글</span>
+                <span class="before_list_preview"></span>
+            </p>
+            <p class="next_list">
+                <span class="next_list_txt">∨ 다음글</span>
+                <span class="next_list_preview"></span>
+            </p>
+
+        </div>
 
     </section>
 </main>

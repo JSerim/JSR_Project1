@@ -73,98 +73,112 @@ if($e_pageNum > $total_page){
             <p class="gray_txt">티젠의 다양한 쇼핑정보와 회사소식을 알려드립니다.</p>
         </div>
 
-        <div class="search_wrap">
-            <span class="search_txt">* 검색어</span>
-            <select name="date_term_sel" id="date_term_sel" class="date_term_sel">
-                <option value="일주일">일주일</option>
-                <option value="한달">한달</option>
-                <option value="세달">세달</option>
-                <option value="전체">전체</option>
-            </select>
-            <select name="keyword_sel" id="keyword_sel" class="keyword_sel">
-                <option value="제목">제목</option>
-                <option value="내용">내용</option>
-                <option value="글쓴이">글쓴이</option>
-                <option value="아이디">아이디</option>
-                <option value="상품정보">상품정보</option>
-            </select>
-            <input type="text" name="writing_box" id="writing_box" class="writing_box">
-            <button type="submit" class="submit_bt">찾기</button>
-        </div>
+        <div class="list_content">
 
-        <div class="write_area">
-            <?php if($s_id == "admin"){ ?>
-            <p >
-                <p class="total_list">[ 전체글 : <?php echo $total;?> 개 ]</p>
-                <span class="writing_bt"><a href="write.php">관리자 글쓰기</a></span>
+            <div class="search_wrap">
+                <span class="search_txt">* 검색어</span>
+                <select name="date_term_sel" id="date_term_sel" class="date_term_sel">
+                    <option value="일주일">일주일</option>
+                    <option value="한달">한달</option>
+                    <option value="세달">세달</option>
+                    <option value="전체">전체</option>
+                </select>
+                <select name="keyword_sel" id="keyword_sel" class="keyword_sel">
+                    <option value="제목">제목</option>
+                    <option value="내용">내용</option>
+                    <option value="글쓴이">글쓴이</option>
+                    <option value="아이디">아이디</option>
+                    <option value="상품정보">상품정보</option>
+                </select>
+                <input type="text" name="writing_box" id="writing_box" class="writing_box">
+                <button type="submit" class="submit_bt">찾기</button>
+            </div>
+
+            <div class="write_area">
+                <?php if($s_id == "admin"){ ?>
+                <p >
+                    <p class="total_list">[ 전체글 : <?php echo $total;?> 개 ]</p>
+                    <span class="writing_bt"><a href="write.php">관리자 글쓰기</a></span>
+                </p>
+                <?php } else{ ?>
+                    <p class="total_list">[ 전체글 : <?php echo $total;?> 개 ]</p>
+                <?php }; ?>
+            </div>
+
+            <table class="notice_table">
+                <tr class="notice_list_title">
+                    <th class="no">번호</th>
+                    <th class="n_title">제목</th>
+                    <th class="writer">작성자</th>
+                    <th class="w_date">작성일</th>
+                    <?php if($s_id == "admin"){ ?>
+                        <th class="admin_func">관리</th>
+                    <?php }; ?>
+                </tr>
+                <?php
+                    // 9) paging : 해당 페이지의 글 시작 번호 = 공식 : (현재 페이지 번호 -1) * 페이지 당 보여질 목록 수
+                    $start = ($page -1) * $list_num;
+                    // 10) paging : 시작번호부터 페이지 당 보여질 목록수 만큼 데이터 구하는 쿼리 작성
+                    // (limit 몇번부터, 몇개 / 순서쓰는 것은 0부터 시작되고 개수 쓰는 것은 1부터 시작됨)
+                    $sql = "select * from $table_name order by idx desc limit $start, $list_num;";
+                    $result = mysqli_query($dbcon, $sql);
+                    // DB에서 데이터 가져오기
+                    // pager : 글번호 (연순으로 만들기)
+                    // * 역순 페이지 번호 출력 공식 : 전체 데이터 - ((현재페이지번호-1) * 페이지당 목록수) = 시작번호
+                    $i = $total -(($page -1) * $list_num);
+                    while($array = mysqli_fetch_array($result)){
+                ?>
+                <tr class="notice_list_content">
+                    <td><?php echo $i;?></td>
+                    <td class="notice_content_title">
+                        <a href="view.php?n_idx=<?php echo $array["idx"]; ?>">
+                            <?php echo $array["n_title"];?>
+                        </a>
+                    </td>
+                    <td><?php echo $array["writer"];?></td>
+                    <?php $w_date = substr($array["w_date"], 0, 10);?>
+                    <td class="w_date_td"><?php echo $w_date;?></td>
+                    <?php if($s_id == "admin"){ ?>
+                        <td class="admin_func_td">
+                            <a href="modify.php?n_idx=<?php echo $array["idx"]; ?>">[수정]</a>
+                            <a href="#" onclick="remove_notice(<?php echo $array['idx']; ?>)">[삭제]</a>
+                        </td>
+                    <?php }; ?>
+                </tr>
+                <?php
+                $i --;
+                };
+                ?>
+            </table>
+
+            <p class="pager">
+                <?php
+                // pager : 이전 페이지
+                if($page <=1){ ?>
+                    <a href="list.php?page=1" class="before">〈〈<span class="hide">이전</span></a>
+                <?php } else { ?>
+                    <a href="list.php?page=<?php echo ($page -1); ?>" class="before">〈〈<span class="hide">이전</span></a>
+                <?php }; ?>
+
+                <?php
+                // pager : 페이지 번호 출력
+                // for($print_page = 시작값; 최종값; 증감량)
+                for($print_page = $s_pageNum; $print_page <= $e_pageNum; $print_page++){
+                ?>
+                <a href="list.php?page=<?php echo $print_page; ?>" class="page"><?php echo $print_page; ?></a>
+                <?php }; ?>
+
+                <?php
+                // pager : 다음 페이지
+                if($page >= $total_page){ ?>
+                    <a href="list.php?page=<?php echo $total_page; ?>" class="next">〉〉<span class="hide">다음</span></a>
+                <?php } else { ?>
+                    <a href="list.php?page=<?php echo ($page +1); ?>" class="next">〉〉<span class="hide">다음</span></a>
+                <?php }; ?>
             </p>
-            <?php } else{ ?>
-                <p class="total_list">[ 전체글 : <?php echo $total;?> 개 ]</p>
-            <?php }; ?>
+
         </div>
 
-        <table class="notice_table">
-            <tr class="notice_list_title">
-                <th class="no">번호</th>
-                <th class="n_title">제목</th>
-                <th class="writer">작성자</th>
-                <th class="w_date">작성일</th>
-            </tr>
-            <?php
-                // 9) paging : 해당 페이지의 글 시작 번호 = 공식 : (현재 페이지 번호 -1) * 페이지 당 보여질 목록 수
-                $start = ($page -1) * $list_num;
-                // 10) paging : 시작번호부터 페이지 당 보여질 목록수 만큼 데이터 구하는 쿼리 작성
-                // (limit 몇번부터, 몇개 / 순서쓰는 것은 0부터 시작되고 개수 쓰는 것은 1부터 시작됨)
-                $sql = "select * from $table_name order by idx desc limit $start, $list_num;";
-                $result = mysqli_query($dbcon, $sql);
-                // DB에서 데이터 가져오기
-                // pager : 글번호 (연순으로 만들기)
-                // * 역순 페이지 번호 출력 공식 : 전체 데이터 - ((현재페이지번호-1) * 페이지당 목록수) = 시작번호
-                $i = $total -(($page -1) * $list_num);
-                while($array = mysqli_fetch_array($result)){
-            ?>
-            <tr class="notice_list_content">
-                <td><?php echo $i;?></td>
-                <td class="notice_content_title">
-                    <a href="view.php?n_idx=<?php echo $array["idx"]; ?>">
-                        <?php echo $array["n_title"];?>
-                    </a>
-                </td>
-                <td><?php echo $array["writer"];?></td>
-                <?php $w_date = substr($array["w_date"], 0, 10);?>
-                <td class="w_date_td"><?php echo $w_date;?></td>
-            </tr>
-            <?php
-            $i --;
-            };
-            ?>
-        </table>
-
-        <p class="pager">
-            <?php
-            // pager : 이전 페이지
-            if($page <=1){ ?>
-                <a href="list.php?page=1" class="before">〈〈<span class="hide">이전</span></a>
-            <?php } else { ?>
-                <a href="list.php?page=<?php echo ($page -1); ?>" class="before">〈〈<span class="hide">이전</span></a>
-            <?php }; ?>
-
-            <?php
-            // pager : 페이지 번호 출력
-            // for($print_page = 시작값; 최종값; 증감량)
-            for($print_page = $s_pageNum; $print_page <= $e_pageNum; $print_page++){
-            ?>
-            <a href="list.php?page=<?php echo $print_page; ?>" class="page"><?php echo $print_page; ?></a>
-            <?php }; ?>
-
-            <?php
-            // pager : 다음 페이지
-            if($page >= $total_page){ ?>
-                <a href="list.php?page=<?php echo $total_page; ?>" class="next">〉〉<span class="hide">다음</span></a>
-            <?php } else { ?>
-                <a href="list.php?page=<?php echo ($page +1); ?>" class="next">〉〉<span class="hide">다음</span></a>
-            <?php }; ?>
-        </p>
     </section>
 
 </main>

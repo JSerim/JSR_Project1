@@ -68,66 +68,68 @@ mysqli_query($dbcon, $sql);
             <p class="gray_txt">상품에 대한 문의를 남겨주세요.</p>
         </div>
 
-        <table class="view_table">
-            <tr>
-                <th class="v_title">작성자</th>
-                <td class="v_content"><?php echo $array["b_name"]; ?></td>
-            </tr>
-            <tr>
-                <th class="v_title">비밀번호</th>
-                <td class="v_content"><input type="text" name="b_pwd" id="b_pwd" class="b_pwd"></td>
-            </tr>
-            <tr>
-                <th class="v_title">상품분류</th>
-                <td class="v_content"><?php echo $array["cate"]; ?></td>
-            </tr>
-            <tr>
-                <th class="v_title">제목</th>
-                <td class="v_content"><?php echo $array["b_title"]; ?></td>
-            </tr>
-            <tr>
-                <th class="v_title">작성일</th>
-                <?php $w_date = substr($array["w_date"], 0, 10);?>
-                <td class="v_content"><?php echo $w_date; ?></td>
-            </tr>
-            <tr >
-                <th class="v_title">조회수</th>
-                <td class="v_content"><?php echo $cnt; ?></td>
-            </tr>
-            <tr>
-                <td colspan="2" class="v_text">
-                    <?php
-                    if($array["f_name"] && substr($array["f_type"], 0, 5) == "image"){
-                        $f_name = $array["f_name"];
-                        echo "
-                            <p>
-                                <img src=\"board_data/$f_name\" alt=\"\">
-                            </p>
-                        ";
-                    };
-                    ?>
-                    <textarea class="textarea"><?php 
-                    $b_content = str_replace("\n", "\n", $array["b_content"]);
-                    $b_content = str_replace(" ", "&nbsp;", $b_content);
-                    echo $b_content;
-                    ?></textarea>
-                </td>
-            </tr>
-            <tr>
-                <th class="v_title">첨부파일</th>
-                <td class="v_content">
-                    <a href="board_data/<?php echo $array["f_name"]; ?>" download="<?php echo $array["f_name"]; ?>">
-                    <?php echo $array["f_name"]; ?>
-                    </a>
-                </td>
-            </tr>
-        </table>
+        <div class="view_content">
+            <table class="view_table">
+                <tr>
+                    <th class="v_title">작성자</th>
+                    <td class="v_content"><?php echo $array["b_name"]; ?></td>
+                </tr>
+                <tr>
+                    <th class="v_title">비밀번호</th>
+                    <td class="v_content"><input type="text" name="b_pwd" id="b_pwd" class="b_pwd"></td>
+                </tr>
+                <tr>
+                    <th class="v_title">상품분류</th>
+                    <td class="v_content"><?php echo $array["cate"]; ?></td>
+                </tr>
+                <tr>
+                    <th class="v_title">제목</th>
+                    <td class="v_content"><?php echo $array["b_title"]; ?></td>
+                </tr>
+                <tr>
+                    <th class="v_title">작성일</th>
+                    <?php $w_date = substr($array["w_date"], 0, 10);?>
+                    <td class="v_content"><?php echo $w_date; ?></td>
+                </tr>
+                <tr >
+                    <th class="v_title">조회수</th>
+                    <td class="v_content"><?php echo $cnt; ?></td>
+                </tr>
+                <tr>
+                    <td colspan="2" class="v_text">
+                        <?php
+                        if($array["f_name"] && substr($array["f_type"], 0, 5) == "image"){
+                            $f_name = $array["f_name"];
+                            echo "
+                                <p>
+                                    <img src=\"board_data/$f_name\" alt=\"\">
+                                </p>
+                            ";
+                        };
+                        ?>
+                        <textarea class="textarea"><?php 
+                        $b_content = str_replace("\n", "\n", $array["b_content"]);
+                        $b_content = str_replace(" ", "&nbsp;", $b_content);
+                        echo $b_content;
+                        ?></textarea>
+                    </td>
+                </tr>
+                <tr>
+                    <th class="v_title">첨부파일</th>
+                    <td class="v_content">
+                        <a href="board_data/<?php echo $array["f_name"]; ?>" download="<?php echo $array["f_name"]; ?>">
+                        <?php echo $array["f_name"]; ?>
+                        </a>
+                    </td>
+                </tr>
+            </table>
 
-        <p class="list">
-            <a href="list.php" class="back_list">목록</a>
-            <a href="modify.php?b_idx=<?php echo $b_idx; ?>" onclick="edit_board()" class="admin_func">수정</a>
-            <a href="#" onclick="remove_board()"  class="admin_func">삭제</a>
-        </p>
+            <p class="list">
+                <a href="list.php" class="back_list">목록</a>
+                <a href="modify.php?b_idx=<?php echo $b_idx; ?>" onclick="edit_board()" class="admin_func">수정</a>
+                <a href="#" onclick="remove_board()"  class="admin_func">삭제</a>
+            </p>
+        </div>
 
     </section>
 </main>

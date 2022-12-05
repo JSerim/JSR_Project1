@@ -77,6 +77,7 @@
     height:40px;
     border-bottom:1px solid #949494;
     margin-bottom:45px;
+    position:absolute;
 }
 .green_box{
     display:block;
@@ -106,6 +107,11 @@
 }
 
 /* 이미지 배치 */
+.mypage_wrap{
+    clear:both;
+    position:relative;
+    top:60px;
+}
 .mypage_list li{
     float:left;
     margin:10px;

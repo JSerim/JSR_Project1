@@ -73,7 +73,7 @@ mysqli_close($dbcon);
                 <p class="gray_txt">상품에 대한 문의를 남겨주세요.</p>
             </div>
 <!-- ============================================================ -->
-            <form name="qa_form" action="edit.php?b_idx=<?php echo $b_idx; ?>" method="post" enctype="multipart/form-data" onsubmit="return board_check()">
+            <form class="qa_form" name="qa_form" action="edit.php?b_idx=<?php echo $b_idx; ?>" method="post" enctype="multipart/form-data" onsubmit="return board_check()">
                 <fieldset class="qa">
                     <legend class="hide">Q&A 글쓰기</legend>
                     

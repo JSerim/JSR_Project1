@@ -19,6 +19,7 @@
     height:40px;
     border-bottom:1px solid #949494;
     margin-bottom:45px;
+    position:absolute;
 }
 .green_box{
     display:block;
@@ -47,6 +48,10 @@
     font-size:15px;
 }
 
+.view_content{
+    position:relative;
+    top:60px;
+}
 /* 테이블 */
 .view_table{
     border-collapse:collapse;

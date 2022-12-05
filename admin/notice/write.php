@@ -53,7 +53,7 @@ include "../inc/admin_check.php";
             <p class="gray_txt">티젠의 다양한 쇼핑정보와 회사소식을 알려드립니다.</p>
         </div>
     
-        <form name="notice_form" action="insert.php" method="post" enctype="multipart/form-data" onsubmit="return notice_check()">
+        <form class="notice_form" name="notice_form" action="insert.php" method="post" enctype="multipart/form-data" onsubmit="return notice_check()">
             <fieldset class="notice">
                 <legend class="hide">공지사항</legend>
 

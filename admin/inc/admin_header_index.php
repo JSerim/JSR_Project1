@@ -30,13 +30,13 @@
             <?php } else if($s_id == "admin"){ ?>
             <!-- 관리자 로그인 -->
                 <span class="prt_name"><?php echo $s_name; ?>님, 안녕하세요.</span>
-                <li class="logout"><a href="login/logout.php">로그아웃</a></li>
+                <li class="logout"><a href="../login/logout.php">로그아웃</a></li>
                 <li class="top_m3"><a href="members/mypage.php">마이페이지</a></li>
                 <li class="admin_page"><a href="#">[관리자 페이지]</a></li>
             <?php } else { ?>
             <!-- 로그인 후 -->
                 <span class="prt_name"><?php echo $s_name; ?>님, 안녕하세요.</span>
-                <li class="logout"><a href="login/logout.php">로그아웃</a></li>
+                <li class="logout"><a href="../login/logout.php">로그아웃</a></li>
                 <li class="top_m3"><a href="members/mypage.php">마이페이지</a></li>
             <?php }; ?>
             <li class="top_m6"><a href="#">언어선택</a>
